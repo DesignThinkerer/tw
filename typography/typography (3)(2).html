@@ -1,0 +1,406 @@
+<!doctype html>
+<!-- The following comment is called a MOTW comment and is necessary for the TiddlyIE Internet Explorer extension -->
+<!-- saved from url=(0021)https://tiddlywiki.com -->
+<html lang="en-GB">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<!--~~ Raw markup for the top of the head section ~~-->
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<meta name="application-name" content="TiddlyWiki" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.6-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no" />
+<meta name="copyright" content="TiddlyWiki created by Jeremy Ruston, (jeremy [at] jermolene [dot] com)
+
+Copyright (c) 2004-2007, Jeremy Ruston
+Copyright (c) 2007-2024, UnaMesa Association
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+* Redistributions of source code must retain the above copyright notice, this
+  list of conditions and the following disclaimer.
+
+* Redistributions in binary form must reproduce the above copyright notice,
+  this list of conditions and the following disclaimer in the documentation
+  and/or other materials provided with the distribution.
+
+* Neither the name of the copyright holder nor the names of its
+  contributors may be used to endorse or promote products derived from
+  this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS 'AS IS'
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." />
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<title>Typography — My notes on learning typography (WIP)</title>
+<!--~~ This is a Tiddlywiki file. The points of interest in the file are marked with this pattern ~~-->
+
+<!--~~ Raw markup ~~-->
+
+
+
+</head>
+<body class="tc-body">
+<!--~~ Raw markup for the top of the body section ~~-->
+
+<!--~~ Static styles ~~-->
+<div id="styleArea">
+<style data-tiddler-title="$:/boot/boot.css" data-tiddler-type="text/css" type="text/css">/*
+Basic styles used before we boot up the parsing engine
+*/
+
+/*
+Error message and password prompt
+*/
+
+.tc-error-form {
+	font-family: sans-serif;
+	color: #fff;
+	z-index: 20000;
+	position: fixed;
+	background-color: rgb(255, 75, 75);
+	border: 8px solid rgb(255, 0, 0);
+	border-radius: 8px;
+	width: 50%;
+	margin-left: 25%;
+	margin-top: 4em;
+	padding: 0 2em 1em 2em;
+}
+
+.tc-error-form h1 {
+	text-align: center;
+}
+
+.tc-error-prompt {
+	text-align: center;
+	color: #000;
+}
+
+.tc-error-message {
+	overflow: auto;
+	max-height: 40em;
+	padding-right: 1em;
+	margin: 1em 0;
+	white-space: pre-line;
+}
+
+.tc-password-wrapper {
+    font-family: sans-serif;
+	z-index: 20000;
+	position: fixed;
+	text-align: center;
+	width: 200px;
+	top: 4em;
+	left: 50%;
+	margin-left: -144px; /* - width/2 - paddingHorz/2 - border */
+	padding: 16px 16px 16px 16px;
+	border-radius: 8px;
+}
+
+.tc-password-wrapper {
+	color: #000;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	background-color: rgb(197, 235, 183);
+	border: 8px solid rgb(164, 197, 152);
+}
+
+.tc-password-wrapper form {
+	text-align: left;
+}
+
+.tc-password-wrapper h1 {
+	font-size: 16px;
+	line-height: 20px;
+	padding-bottom: 16px;
+}
+
+.tc-password-wrapper input {
+	width: 100%;
+}
+</style>
+</div>
+<!--~~ Static content for Google and browsers without JavaScript ~~-->
+<noscript>
+<div id="splashArea">
+
+
+<p>This <a class="tc-tiddlylink-external" href="https://tiddlywiki.com" rel="noopener noreferrer" target="_blank">TiddlyWiki</a> contains the following tiddlers:</p><p><ul>
+
+<li>$:/build</li>
+
+<li>$:/config/AutoSave</li>
+
+<li>$:/config/ExternalJS/EnableExternalPlugins</li>
+
+<li>$:/config/ExternalJS/Prefix/Core</li>
+
+<li>$:/config/ExternalJS/Prefix/Plugins</li>
+
+<li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home</li>
+
+<li>$:/config/RelinkOnRename</li>
+
+<li>$:/config/SaveWikiButton/Template</li>
+
+<li>$:/config/Tiddlers/TitleLinks</li>
+
+<li>$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/fold-bar</li>
+
+<li>$:/config/WikiParserRules/Inline/wikilink</li>
+
+<li>$:/DefaultTiddlers</li>
+
+<li>$:/Editor/Macro</li>
+
+<li>$:/ExternalJS</li>
+
+<li>$:/Import</li>
+
+<li>$:/isEncrypted</li>
+
+<li>$:/layout</li>
+
+<li>$:/macros/yt</li>
+
+<li>$:/palette</li>
+
+<li>$:/plugins/Gk0Wk/CPL-Repo/config/auto-update-intervals-minutes</li>
+
+<li>$:/plugins/Gk0Wk/CPL-Repo/config/popup-readme-at-startup</li>
+
+<li>$:/plugins/linonetwo/ego-store-lite/configs/Golds</li>
+
+<li>$:/plugins/Telumire/PLM/ViewTemplate/title/nav</li>
+
+<li>$:/plugins/Telumire/PLM/ViewTemplateTitleFilters/nav</li>
+
+<li>$:/plugins/Telumire/Switcher/palettes</li>
+
+<li>$:/SiteDomain</li>
+
+<li>$:/SitePreviewImageUrl</li>
+
+<li>$:/SitePreviewUrl</li>
+
+<li>$:/SiteSubtitle</li>
+
+<li>$:/SiteTitle</li>
+
+<li>$:/SiteUrl</li>
+
+<li>$:/state/addplugins/tab-1342078386</li>
+
+<li>$:/state/http-requests</li>
+
+<li>$:/state/tab--2112689675</li>
+
+<li>$:/state/tab-1749438307</li>
+
+<li>$:/state/tab/sidebar--595412856</li>
+
+<li>$:/status/RequireReloadDueToPluginChange</li>
+
+<li>$:/status/UserName</li>
+
+<li>$:/StoryList</li>
+
+<li>$:/tags/macro/random.js</li>
+
+<li>$:/tags/ViewTemplateBodyFilter</li>
+
+<li>$:/themes/nico/notebook/palettes/palette-beige</li>
+
+<li>$:/themes/nico/notebook/palettes/palette-dark</li>
+
+<li>$:/themes/nico/notebook/palettes/palette-grey</li>
+
+<li>$:/ThemeTweaks/style/fold_banner</li>
+
+<li>$:/UploadURL</li>
+
+<li>$:/UploadWithUrlOnly</li>
+
+<li>$:/view</li>
+
+<li>About</li>
+
+<li>Affinity Publisher</li>
+
+<li>hello</li>
+
+<li>html sample</li>
+
+<li>lorem10</li>
+
+<li>lorem100</li>
+
+<li>lorem1000</li>
+
+<li>New Tiddler</li>
+
+<li>point size</li>
+
+<li>preview</li>
+
+<li>Resources for creating an accessible design system</li>
+
+<li>Resources for learning design</li>
+
+<li>snippet macro</li>
+
+<li>Spacing</li>
+
+<li>Summary of key rules</li>
+
+<li>The Elements of Typographic Style</li>
+
+<li>theophile.dev</li>
+
+<li>Typography</li>
+
+<li>Typography rules</li>
+
+<li>Typography/Alignement</li>
+
+<li>Typography/Hierarchy</li>
+
+<li>Typography/Letter spacing</li>
+
+<li>Typography/Line height</li>
+
+<li>Typography/Line spacing</li>
+
+<li>Typography/Paragraph spacing</li>
+
+<li>Typography/Spaces</li>
+
+<li>Typography/Text length</li>
+
+<li>Typography/Typescale</li>
+
+<li>Typography/Word spacing</li>
+
+<li>Using unitless value for line-height</li>
+
+<li>UX Research &amp; Typography</li>
+
+<li>Web safe fonts</li>
+
+<li>widows</li>
+
+</ul>
+</p>
+
+
+
+<style>
+.tc-remove-when-wiki-loaded {display: none;}
+</style>
+
+</div>
+</noscript>
+<!--~~ Ordinary tiddlers ~~-->
+<script class="tiddlywiki-tiddler-store" type="application/json">[
+{"title":"$:/build","commit":"bcae5cc2ef20e6ca06dbd2d987c3a91a5c2c0341","text":"Prerelease built from branch 'master' at commit bcae5cc2ef20e6ca06dbd2d987c3a91a5c2c0341 of https://github.com/TiddlyWiki/TiddlyWiki5 at 2024-08-25 10:40:26 UTC\n"},
+{"text":"no","title":"$:/config/AutoSave"},
+{"created":"20240826094605449","creator":"theophile.dev","text":"yes","title":"$:/config/ExternalJS/EnableExternalPlugins","modified":"20240826094605449","modifier":"theophile.dev"},
+{"created":"20240218194256384","text":"https://tiddlywiki.com/prerelease/tiddlywikicore","title":"$:/config/ExternalJS/Prefix/Core","modified":"20240218194324542"},
+{"created":"20240307163222072","creator":"theophile.dev","text":"https://designthinkerer.github.io/tw/typography/myplugins","title":"$:/config/ExternalJS/Prefix/Plugins","modified":"20240826095019863","tags":"","modifier":"theophile.dev"},
+{"created":"20240306214626900","text":"show","title":"$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home","modified":"20240306214626900"},
+{"created":"20240307234607427","text":"yes","title":"$:/config/RelinkOnRename","modified":"20240307234607427"},
+{"created":"20240826094646002","creator":"theophile.dev","title":"$:/config/SaveWikiButton/Template","text":"$:/core/save/offline-external-js","modified":"20240826095026909","modifier":"theophile.dev"},
+{"created":"20240314224354616","creator":"theophile.dev","title":"$:/config/Tiddlers/TitleLinks","text":"yes","modified":"20240314224354616","modifier":"theophile.dev"},
+{"created":"20240313074955824","text":"show","title":"$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/fold-bar","modified":"20240313074955824"},
+{"created":"20240314224345921","creator":"theophile.dev","text":"enable","title":"$:/config/WikiParserRules/Inline/wikilink","modified":"20240314224345921","modifier":"theophile.dev"},
+{"created":"20240307234639332","creator":"theophile.dev","title":"$:/DefaultTiddlers","text":"[[Typography]]\n[[About]]","modified":"20240315001559781","modifier":"theophile.dev"},
+{"created":"20220926201711935","text":"\\define editor(field:\"text\",placeholder:\"\u003C\u003C__field__>>\",tiddler)\n\\define editor-buttons(filter,style)\n\u003Cdiv style=\u003C\u003C__style__>> class=\"editor-buttons\">\n\u003C$list filter=\"\n[[$:/tags/EditorToolbar]tagging[]!is[draft]]\n:filter[\u003Cconfig-visibility-title>get[text]else[]!match[hide]]\n:filter[$filter$]\">\n\u003Cdiv style=\"position:absolute;top:0;left:0;visibility:hidden\">\u003C$transclude tiddler=\"$:/core/ui/EditTemplate/body/toolbar/button\"/>\u003C/div>\n\u003C/$list>\n\u003C/div>\n\\end editor-buttons\n\u003C$tiddler tiddler={{{ [\u003C__tiddler__>!is[blank]else\u003CcurrentTiddler>] }}}>\n@@position:relative;\n\u003C$edit\nclass=\"tc-edit-texteditor tc-edit-texteditor-body\"\ntabindex={{$:/config/EditTabIndex}}\nfocus={{{ [{$:/config/AutoFocus}match[text]then[yes]] }}}\ncancelPopups=\"yes\"\nfield=\u003C\u003C__field__>>\n>\n\u003C\u003Ceditor-buttons \"has[dropdown]\" \"position:absolute;left:0;top:0;\">> \u003C\u003Ceditor-buttons \"!has[dropdown]\" \"display:none\">>\n\u003C/$edit>\u003Cstyle>.editor-buttons .tc-drop-down.tc-popup-keep{visibility:initial}\u003C/style>\n@@\n\u003C/$tiddler>\n\\end editor","creator":"Telumire","tags":"$:/tags/Macro Sources Description","title":"$:/Editor/Macro","modified":"20230430072654778","modifier":"Telumire","code-body":"yes"},
+{"created":"20221206112326766","text":"\\procedure form(filter,legend)\n\u003Cform class=\"data\">\n\u003Cfieldset>\n\u003Clegend>\u003C\u003Clegend>>\u003C/legend>\n\u003C$list filter=\u003C\u003Cfilter>> >\n\u003Clabel>\u003C$link>\u003C$text text={{{ [{!!title}split[/]last[]] }}}/>\u003C/$link> \u003C$edit-text tag=\"input\"/>\n\\end\n\u003Cdiv>\n\n\u003Cstyle>\n.data fieldset{\nborder-radius:5px;\ndisplay:grid;\ngrid-template-columns:auto 1fr;\ngap:1ch;\n\n& label{\nalign-items:center;\ngrid-column:1/3;\ndisplay: grid;\ngrid-template-columns:subgrid;\n}\n}\n\u003C/style>\n\n\u003C\u003Cform filter:\"[prefix[$:/config/ExternalJS/Prefix/]]\" legend:\"Paths\">>\n\n{{$:/plugins/cdr/external-js/usage}}","creator":"Telumire","title":"$:/ExternalJS","modified":"20240224210508404","modifier":"Telumire","tags":"$:/tags/SideBar","caption":"External"},
+{"title":"$:/Import","text":"The following tiddlers were imported:\n\n# [[$:/config/ExternalJS/Prefix/Core]]\n# [[$:/config/ExternalJS/Prefix/Plugins]]","status":"complete"},
+{"title":"$:/isEncrypted","text":"no"},
+{"created":"20240306214349188","title":"$:/layout","text":"$:/core/ui/PageTemplate","modified":"20240306214408293"},
+{"created":"20240229163452764","creator":"theophile.dev","text":"\\procedure yt(https,inline-style,class,index,start:\"0\",end,autoplay:\"1\",cc_lang_pref,cc_lang_pref,cc_load_policy,color,controls,disablekb,fs,hl,iv_load_policy:\"3\",modestbranding:\"1\")\n\u003C$let\nlist={{{ [\u003Chttps>split[list=]nth[2]] ~[\u003Chttps>search[,]] }}}\nvideoId={{{ [\u003Chttps>split[/]split[v=]last[]split[?]split[&]first[]] }}}\nthumbnailId={{{ [\u003CvideoId>split[,]first[]] }}}\nparams=`${[\u003Clist>is[blank]then[]else[&]]}$index=$(index)$&start=$(start)$&end=$(end)$&autoplay=$(autoplay)$&cc_lang_pref=$(cc_lang_pref)$&cc_load_policy=$(cc_load_policy)$&color=$(color)$&controls=$(controls)$&disablekb=$(disablekb)$&fs=$(fs)$&hl=$(hl)$&iv_load_policy=$(iv_load_policy)$&modestbranding=$(modestbranding)$`\nembedUrl=`https://www.youtube-nocookie.com/embed/${\n[\u003Clist>search[,]addprefix[?playlist=]]\n[\u003Clist>!is[blank]addprefix[?list=]]\n:else[\u003CvideoId>addsuffix[?]]\n}$$(params)$`\n>\n\u003Ciframe\ntitle='YouTube video player'\nstyle='width:100%;aspect-ratio:16/9;border:0;max-height:100vh;$(inline-style)$;'\nclass='video $(class)$'\nsrc='$(embedUrl)$'\nallowfullscreen\nallow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture, web-share'\nloading='lazy'\nsrcdoc=```\n\u003Cstyle>\nimg{width:100%;}\nimg,span{position:fixed;inset:0;margin:auto;}\nspan{\nheight:1lh;\ntext-align:center;\nfont:48px/1.5 sans-serif;\ncolor:white;\ntext-shadow:0 0 0.5em black\n}\n\u003C/style>\n\u003Ca href='$(embedUrl)$'>\n\u003Cimg\nsrc='https://i.ytimg.com/vi_webp/$(thumbnailId)$/default.webp'\nsrcset='\nhttps://i.ytimg.com/vi_webp/$(thumbnailId)$/default.webp 500w,\nhttps://i.ytimg.com/vi_webp/$(thumbnailId)$/maxresdefault.webp 1000w'\nalt=\"Video\"\n>\n\u003Cspan>▶\u003C/span>\n\u003C/a>\n```/>\n\u003C!-- Doc : https://developers.google.com/youtube/player_parameters -->\n\\end yt","tags":"$:/tags/Macro","title":"$:/macros/yt","modified":"20240314223909765","modifier":"theophile.dev","code-body":"yes"},
+{"created":"20240306221659728","creator":"theophile.dev","title":"$:/palette","text":"$:/themes/nico/notebook/palettes/palette-beige","modified":"20240826094441627","modifier":"theophile.dev"},
+{"created":"20240306214615481","creator":"theophile.dev","title":"$:/plugins/Gk0Wk/CPL-Repo/config/auto-update-intervals-minutes","text":"0","modified":"20240506112101531","modifier":"theophile.dev"},
+{"created":"20240306213718572","text":"1","title":"$:/plugins/Gk0Wk/CPL-Repo/config/popup-readme-at-startup","modified":"20240306213718572"},
+{"created":"20240306214402435","text":"0","modified":"20240306214402435","title":"$:/plugins/linonetwo/ego-store-lite/configs/Golds"},
+{"created":"20230501222035160","creator":"theophile.dev","text":"\u003Cnav style.display=\"inline\">\u003C$list filter=\"[\u003CcurrentTiddler>split[/]]:map[\u003C..currentTiddler>split[/]butlast\u003Cindex>join[/]]+[trim[/]unique[]sort[]]\" counter=\"depth\">\u003C$link tag={{{ [\u003Cdepth-last>match[no]then[span]else[a]] }}} class={{{ [\u003Cdepth-last>match[no]then[tc-system-title-prefix]] }}}>\u003C$text text={{{ [{!!title}split[/]last[]] }}}/>\u003C/$link>\u003C$text text={{{ [\u003Cdepth-last>match[no]then[/]] }}}/>\u003C/$list>\u003C/nav>","tags":"","title":"$:/plugins/Telumire/PLM/ViewTemplate/title/nav","modified":"20240314224332772","modifier":"theophile.dev"},
+{"created":"20230502023412680","creator":"theophile.dev","text":"[[$:/plugins/Telumire/PLM/ViewTemplate/title/nav]]","tags":"$:/tags/ViewTemplateTitleFilter","title":"$:/plugins/Telumire/PLM/ViewTemplateTitleFilters/nav","modified":"20240314224258875","code-body":"yes","list-before":"","modifier":"theophile.dev"},
+{"created":"20230416142654047","creator":"theophile.dev","title":"$:/plugins/Telumire/Switcher/palettes","dark":"$:/palettes/CupertinoDark","modified":"20240506111738447","light":"$:/palettes/Blanca","type":"application/json","text":"{\n    \"light\": \"$:/themes/nico/notebook/palettes/palette-beige\",\n    \"dark\": \"$:/themes/nico/notebook/palettes/palette-dark\"\n}","modifier":"theophile.dev"},
+{"text":"typography.tiddlyhost.com","title":"$:/SiteDomain"},
+{"text":"https://typography.tiddlyhost.com/thumb.png","title":"$:/SitePreviewImageUrl"},
+{"text":"https://typography.tiddlyhost.com/thumb.png","title":"$:/SitePreviewUrl"},
+{"created":"20240307234239649","creator":"theophile.dev","title":"$:/SiteSubtitle","text":"My notes on learning typography (WIP)","modified":"20240315001514330","modifier":"theophile.dev"},
+{"created":"20240307234235733","title":"$:/SiteTitle","text":"Typography","modified":"20240314220035917"},
+{"text":"https://typography.tiddlyhost.com","title":"$:/SiteUrl"},
+{"created":"20240826094457450","creator":"theophile.dev","title":"$:/state/addplugins/tab-1342078386","text":"$:/plugins/Gk0Wk/CPL-Repo/PluginLibraryUI","modified":"20240826094457450","modifier":"theophile.dev"},
+{"title":"$:/state/http-requests","text":"0"},
+{"created":"20240826094523055","creator":"theophile.dev","title":"$:/state/tab--2112689675","text":"$:/core/ui/ControlPanel/Advanced","modified":"20240826094523055","modifier":"theophile.dev"},
+{"created":"20240826094454406","creator":"theophile.dev","title":"$:/state/tab-1749438307","text":"$:/core/ui/ControlPanel/Info","modified":"20240826094520087","modifier":"theophile.dev"},
+{"created":"20240826094529415","creator":"theophile.dev","title":"$:/state/tab/sidebar--595412856","text":"$:/ExternalJS","modified":"20240826094529415","modifier":"theophile.dev"},
+{"title":"$:/status/RequireReloadDueToPluginChange","text":"no"},
+{"created":"20240314220637009","creator":"t","title":"$:/status/UserName","text":"theophile.dev","modified":"20240314220639596","modifier":"theophile.de"},
+{"title":"$:/StoryList","created":"20240826094451277","creator":"theophile.dev","text":"","list":"$:/Import $:/ControlPanel Typography About","modified":"20240826094451277","modifier":"theophile.dev"},
+{"title":"$:/tags/macro/random.js","text":"exports.name = \"r\";\n\nexports.params = [];\n\nexports.run = function() {\n return Math.random();\n};","created":"20220131000344646","modified":"20220131001422173","module-type":"macro","tags":"$:/tags/Macro random","type":"application/javascript","revision":"0","bag":"default"},
+{"created":"20240319150738694","creator":"theophile.dev","title":"$:/tags/ViewTemplateBodyFilter","list":"test $:/config/ViewTemplateBodyFilters/hide-body $:/config/ViewTemplateBodyFilters/code-body $:/config/ViewTemplateBodyFilters/stylesheet $:/config/ViewTemplateBodyFilters/core-ui-tags $:/config/ViewTemplateBodyFilters/system $:/config/ViewTemplateBodyFilters/import $:/config/ViewTemplateBodyFilters/plugin $:/config/ViewTemplateBodyFilters/default","modified":"20240319150911443","modifier":"theophile.dev"},
+{"created":"20240426221036677","title":"$:/themes/nico/notebook/palettes/palette-beige","type":"application/x-tiddler-dictionary","description":"A beige colour palette for Notebook","name":"Notebook Beige","tags":"$:/tags/Palette $:/tags/notebook/Palette","modified":"20240426221036677","color-scheme":"light","text":"alert-background: #ffe476\nalert-border: #b99e2f\nalert-highlight: #881122\nalert-muted-foreground: #b99e2f\nbackground: #ffffff\nblockquote-bar: \u003C\u003Ccolour muted-foreground>>\nbutton-background:\nbutton-foreground:\nbutton-border:\ncode-background: #f7f7f9\ncode-border: #e1e1e8\ncode-foreground: #dd1144\ndirty-indicator: #c63636\ndownload-background: #66cccc\ndownload-foreground: \u003C\u003Ccolour background>>\ndragger-background: \u003C\u003Ccolour foreground>>\ndragger-foreground: \u003C\u003Ccolour background>>\ndropdown-background: \u003C\u003Ccolour background>>\ndropdown-border: #ddd\ndropdown-tab-background-selected: #fff\ndropdown-tab-background: #ececec\ndropzone-background: #da8548\nexternal-link-background-hover: inherit\nexternal-link-background-visited: inherit\nexternal-link-background: inherit\nexternal-link-foreground-hover: inherit\nexternal-link-foreground-visited: #0000aa\nexternal-link-foreground: #0000ee\nforeground: #3F3B3B\nmessage-background: #e6f5e8\nmessage-border: #2b5532\nmessage-foreground: #2b5532\nmodal-backdrop: \u003C\u003Ccolour foreground>>\nmodal-background: \u003C\u003Ccolour background>>\nmodal-border: #999999\nmodal-footer-background: #f5f5f5\nmodal-footer-border: #dddddd\nmodal-header-border: #eeeeee\nmuted-foreground: #999999\nnotification-background: #ffffdd\nnotification-border: #999999\npage-background: #f5f5ee\npre-background: #f6f6f6\npre-border: #cccccc\nprimary: #7f4bca\nselect-tag-background:\nselect-tag-foreground:\nsidebar-button-foreground: #a6a69c\nsidebar-controls-foreground-hover: #000000\nsidebar-controls-foreground: \u003C\u003Ccolour sidebar-button-foreground>>\nsidebar-foreground-shadow: rgba(255,255,255, 0.8)\nsidebar-foreground: #acacac\nsidebar-muted-foreground-hover: #444444\nsidebar-muted-foreground: #c0c0c0\nsidebar-tab-background-selected: #ffffff\nsidebar-tab-background: \u003C\u003Ccolour tab-background>>\nsidebar-tab-border-selected: \u003C\u003Ccolour tab-border-selected>>\nsidebar-tab-border: \u003C\u003Ccolour tab-border>>\nsidebar-tab-divider: \u003C\u003Ccolour tab-divider>>\nsidebar-tab-foreground-selected: \u003C\u003Ccolour tab-foreground-selected>>\nsidebar-tab-foreground: \u003C\u003Ccolour tab-foreground>>\nsidebar-tiddler-link-foreground-hover: \u003C\u003Ccolour primary>>\nsidebar-tiddler-link-foreground: \u003C\u003Ccolour tab-foreground>>\nsite-title-foreground: #353748\nstatic-alert-foreground: #aaaaaa\ntab-background-selected: #ffffff\ntab-background: #eeeeee\ntab-border-selected: #cccccc\ntab-border: #cccccc\ntab-divider: #d8d8d8\ntab-foreground-selected: \u003C\u003Ccolour foreground>>\ntab-foreground: #888888\ntable-border: #dddddd\ntable-footer-background: #a8a8a8\ntable-header-background: #f0f0f0\ntag-background: #ffeedd\ntag-foreground: #000\ntiddler-background: \u003C\u003Ccolour background>>\ntiddler-border: #dbdbc7;\ntiddler-controls-foreground-hover: #888888;\ntiddler-controls-foreground-selected: #888888;\ntiddler-controls-foreground: #cccccc\ntiddler-editor-background: \u003C\u003Ccolour background>>\ntiddler-editor-border-image: #ffffff\ntiddler-editor-border: rgba(0,0,0,.2)\ntiddler-editor-fields-even: #e0e8e0\ntiddler-editor-fields-odd: #f0f4f0\ntiddler-info-background: #f8f8f8\ntiddler-info-border: #dddddd\ntiddler-info-tab-background: #f8f8f8\ntiddler-link-background: \u003C\u003Ccolour background>>\ntiddler-link-foreground: \u003C\u003Ccolour primary>>\ntiddler-subtitle-foreground: #aaaaaa\ntiddler-title-foreground: #333\ntoolbar-new-button:\ntoolbar-options-button:\ntoolbar-save-button:\ntoolbar-info-button:\ntoolbar-edit-button:\ntoolbar-close-button:\ntoolbar-delete-button:\ntoolbar-cancel-button:\ntoolbar-done-button:\nuntagged-background: #999999\nvery-muted-foreground: #888888\n"},
+{"created":"20240426221108953","title":"$:/themes/nico/notebook/palettes/palette-dark","type":"application/x-tiddler-dictionary","description":"A dark colour palette for Notebook","name":"Notebook Dark","tags":"$:/tags/Palette $:/tags/notebook/Palette","modified":"20240426221108953","color-scheme":"dark","text":"alert-background: #643b43\nalert-border: #3f181f\nalert-highlight: #881122\nalert-muted-foreground: #bc8b94\nbackground: #383e49\nblockquote-bar: \u003C\u003Ccolour muted-foreground>>\nbutton-background:\nbutton-border:\nbutton-foreground:\ncode-background: #2c323b\ncode-border: #111\ncode-foreground: #dd1144\ndirty-indicator: #c63636\ndownload-background: #98be65\ndownload-foreground: \u003C\u003Ccolour background>>\ndragger-background: \u003C\u003Ccolour foreground>>\ndragger-foreground: \u003C\u003Ccolour background>>\ndropdown-background: \u003C\u003Ccolour background>>\ndropdown-border: #111\ndropdown-tab-background-selected: #fff\ndropdown-tab-background: #ececec\ndropzone-background: #da8548\nexternal-link-background-hover: inherit\nexternal-link-background-visited: inherit\nexternal-link-background: inherit\nexternal-link-foreground-hover: inherit\nexternal-link-foreground-visited: #61afef\nexternal-link-foreground: #c678dd\nforeground: #c8ced8\nmessage-background: #2c323e\nmessage-border: #111\nmessage-foreground: #d5e2f1\nmodal-backdrop: \u003C\u003Ccolour foreground>>\nmodal-background: \u003C\u003Ccolour background>>\nmodal-border: #778591\nmodal-footer-background: #2f343e\nmodal-footer-border: #111315\nmodal-header-border: #778591\nmuted-foreground: #999999\nnotification-background: #3a5e39\nnotification-border: #192c19\npage-background: #262b33\npre-background: \u003C\u003Ccolour page-background>>\npre-border: \u003C\u003Ccolour tiddler-border>>\nprimary: #bf93ff\nselect-tag-background:\nselect-tag-foreground:\nsidebar-button-foreground: #5e646f\nsidebar-controls-foreground-hover: #cad2e5\nsidebar-controls-foreground: \u003C\u003Ccolour sidebar-button-foreground>>\nsidebar-foreground-shadow: rgba(255,255,255, 0.8)\nsidebar-foreground: #cad2e5\nsidebar-muted-foreground-hover: #444444\nsidebar-muted-foreground: #c0c0c0\nsidebar-tab-background-selected: \u003C\u003Ccolour tab-background-selected>>\nsidebar-tab-background: \u003C\u003Ccolour tab-background>>\nsidebar-tab-border-selected: \u003C\u003Ccolour tab-border-selected>>\nsidebar-tab-border: \u003C\u003Ccolour tab-border>>\nsidebar-tab-divider: \u003C\u003Ccolour tab-divider>>\nsidebar-tab-foreground-selected: \u003C\u003Ccolour tab-foreground-selected>>\nsidebar-tab-foreground: \u003C\u003Ccolour tab-foreground>>\nsidebar-tiddler-link-foreground-hover: \u003C\u003Ccolour primary>>\nsidebar-tiddler-link-foreground: \u003C\u003Ccolour tab-foreground>>\nsite-title-foreground: \u003C\u003Ccolour foreground>>\nstatic-alert-foreground: #aaaaaa\ntab-background-selected: \u003C\u003Ccolour background>>\ntab-background: \u003C\u003Ccolour page-background>>\ntab-border-selected: \u003C\u003Ccolour foreground>>\ntab-border: #cad2e5\ntab-divider: #cad2e5\ntab-foreground-selected: #ecf2ff\ntab-foreground: #cad2e5\ntable-border: #aaaaaa\ntable-footer-background: #a8a8a8\ntable-header-background: #262b33\ntag-background: #fcb671\ntag-foreground: #000\ntiddler-background: \u003C\u003Ccolour background>>\ntiddler-border: #111\ntiddler-controls-foreground-hover: #cad2e5\ntiddler-controls-foreground-selected: #cad2e5\ntiddler-controls-foreground: #5e646f\ntiddler-editor-background: \u003C\u003Ccolour background>>\ntiddler-editor-border-image: #ffffff\ntiddler-editor-border: rgba(255, 255, 255, 0.3)\ntiddler-editor-fields-even: \u003C\u003Ccolour background>>\ntiddler-editor-fields-odd: #2c323b\ntiddler-info-background: #2f343e\ntiddler-info-border: #111315\ntiddler-info-tab-background: \u003C\u003Ccolour primary>>\ntiddler-link-background: \u003C\u003Ccolour background>>\ntiddler-link-foreground: \u003C\u003Ccolour primary>>\ntiddler-subtitle-foreground: #aaaaaa\ntiddler-title-foreground: \u003C\u003Ccolour foreground>>\ntoolbar-cancel-button:\ntoolbar-close-button:\ntoolbar-delete-button:\ntoolbar-done-button:\ntoolbar-edit-button:\ntoolbar-info-button:\ntoolbar-new-button:\ntoolbar-options-button:\ntoolbar-save-button:\nuntagged-background: #999999\nvery-muted-foreground: #888888\n"},
+{"created":"20240426221140949","title":"$:/themes/nico/notebook/palettes/palette-grey","type":"application/x-tiddler-dictionary","description":"A grey color palette for Notebook","name":"Notebook Grey","tags":"$:/tags/Palette $:/tags/notebook/Palette","modified":"20240426221140949","color-scheme":"light","text":"alert-background: #ffe476\nalert-border: #b99e2f\nalert-highlight: #881122\nalert-muted-foreground: #b99e2f\nbackground: #ffffff\nblockquote-bar: \u003C\u003Ccolour muted-foreground>>\nbutton-background:\nbutton-foreground:\nbutton-border:\ncode-background: #f7f7f9\ncode-border: #e1e1e8\ncode-foreground: #dd1144\ndirty-indicator: #c63636\ndownload-background: #66cccc\ndownload-foreground: \u003C\u003Ccolour background>>\ndragger-background: \u003C\u003Ccolour foreground>>\ndragger-foreground: \u003C\u003Ccolour background>>\ndropdown-background: \u003C\u003Ccolour background>>\ndropdown-border: #ddd\ndropdown-tab-background-selected: #fff\ndropdown-tab-background: #ececec\ndropzone-background: #da8548\nexternal-link-background-hover: inherit\nexternal-link-background-visited: inherit\nexternal-link-background: inherit\nexternal-link-foreground-hover: inherit\nexternal-link-foreground-visited: #0000aa\nexternal-link-foreground: #0000ee\nforeground: #283c46\nmessage-background: #ecf2ff\nmessage-border: #cfd6e6\nmessage-foreground: #547599\nmodal-backdrop: \u003C\u003Ccolour foreground>>\nmodal-background: \u003C\u003Ccolour background>>\nmodal-border: #999999\nmodal-footer-background: #f5f5f5\nmodal-footer-border: #dddddd\nmodal-header-border: #eeeeee\nmuted-foreground: #999999\nnotification-background: #ffffdd\nnotification-border: #999999\npage-background: #f4f4f4\npre-background: #f6f6f6\npre-border: #cccccc\nprimary: #127edd\nselect-tag-background:\nselect-tag-foreground:\nsidebar-button-foreground: #a6a69c\nsidebar-controls-foreground-hover: #000000\nsidebar-controls-foreground: \u003C\u003Ccolour sidebar-button-foreground>>\nsidebar-foreground-shadow: rgba(255,255,255, 0.8)\nsidebar-foreground: #acacac\nsidebar-muted-foreground-hover: #444444\nsidebar-muted-foreground: #c0c0c0\nsidebar-tab-background-selected: #ffffff\nsidebar-tab-background: \u003C\u003Ccolour tab-background>>\nsidebar-tab-border-selected: \u003C\u003Ccolour tab-border-selected>>\nsidebar-tab-border: \u003C\u003Ccolour tab-border>>\nsidebar-tab-divider: \u003C\u003Ccolour tab-divider>>\nsidebar-tab-foreground-selected: \u003C\u003Ccolour tab-foreground-selected>>\nsidebar-tab-foreground: \u003C\u003Ccolour tab-foreground>>\nsidebar-tiddler-link-foreground-hover: \u003C\u003Ccolour primary>>\nsidebar-tiddler-link-foreground: \u003C\u003Ccolour tab-foreground>>\nsite-title-foreground: #353748\nstatic-alert-foreground: #aaaaaa\ntab-background-selected: #ffffff\ntab-background: #eeeeee\ntab-border-selected: #cccccc\ntab-border: #cccccc\ntab-divider: #d8d8d8\ntab-foreground-selected: \u003C\u003Ccolour foreground>>\ntab-foreground: #888888\ntable-border: #dddddd\ntable-footer-background: #a8a8a8\ntable-header-background: #f0f0f0\ntag-background: #ffeedd\ntag-foreground: #000\ntiddler-background: \u003C\u003Ccolour background>>\ntiddler-border: #ddd\ntiddler-controls-foreground-hover: #888888;\ntiddler-controls-foreground-selected: #888888;\ntiddler-controls-foreground: #cccccc\ntiddler-editor-background: \u003C\u003Ccolour background>>\ntiddler-editor-border-image: #ffffff\ntiddler-editor-border: rgba(0,0,0,.2)\ntiddler-editor-fields-even: #e0e8e0\ntiddler-editor-fields-odd: #f0f4f0\ntiddler-info-background: #f8f8f8\ntiddler-info-border: #dddddd\ntiddler-info-tab-background: #f8f8f8\ntiddler-link-background: \u003C\u003Ccolour background>>\ntiddler-link-foreground: \u003C\u003Ccolour primary>>\ntiddler-subtitle-foreground: #aaaaaa\ntiddler-title-foreground: #333\ntoolbar-new-button:\ntoolbar-options-button:\ntoolbar-save-button:\ntoolbar-info-button:\ntoolbar-edit-button:\ntoolbar-close-button:\ntoolbar-delete-button:\ntoolbar-cancel-button:\ntoolbar-done-button:\nuntagged-background: #999999\nvery-muted-foreground: #888888\n"},
+{"created":"20210703203411752","text":"button.tc-fold-banner, button.tc-unfold-banner {\n    position: absolute;\n    padding: 0;\n    margin: 0;\n    background: none;\n    border: none;\n    width: 10px;\n    text-align: center;\n    margin-left: 0 px;\n    left: 0px;\n    top: 0px;\n    bottom: 0px;\n}\n\n.tc-unfold-banner:hover {\n    border: none;\n}","title":"$:/ThemeTweaks/style/fold_banner","type":"text/css","bag":"default","modified":"20221107150252673","revision":"0","tags":"$:/tags/Stylesheet $:/ThemeTweaks"},
+{"text":"","title":"$:/UploadURL"},
+{"text":"yes","title":"$:/UploadWithUrlOnly"},
+{"created":"20240308003738246","title":"$:/view","text":"classic","modified":"20240308003745860"},
+{"created":"20240314220201893","creator":"theophile.dev","text":"This tiddlywiki contains notes and examples on typography. You can download an offline copy [[here|$:/core/ui/DownloadFullWiki]]. Right now I'm focusing on web typography, I might focus on print later. Send feedback at {{hello}} !","title":"About","modified":"20240315001900549","modifier":"theophile.dev"},
+{"created":"20240826093520835","creator":"theophile.dev","text":"Affinity Publisher is an alternative to Adobe Indesign. Here's my notes on how to use it for typography |! |!Alpha |!Beta |!Gamma |!Delta |\n|!One | | | | |\n|!Two | | | | |\n|!Three | | | | |\n\n","tags":"","title":"Affinity Publisher","modified":"20240826093821575","modifier":"theophile.dev"},
+{"created":"20240314232610357","creator":"theophile.dev","text":"\u003Ca href=\"mailto:hello@theophile.dev\">hello@theophile.dev\u003C/a>","tags":"","title":"hello","modified":"20240314232630631","modifier":"theophile.dev"},
+{"created":"20240315035029431","creator":"theophile.dev","text":"\u003Ch1>H1 Title\u003C/h1>\n\u003Ch2>H2 Title\u003C/h2>\n\u003Ch3>H3 Title\u003C/h3>\n\u003Ch4>H4 Title\u003C/h4>\n\u003Ch5>H5 Title\u003C/h5>\n\u003Ch6>H6 Title\u003C/h6>\n\n\u003Cp>This is a paragraph to see the default font size and line height.\u003C/p>\n\u003Cp>\u003Cem>This is an emphasized paragraph (italic).\u003C/em>\u003C/p>\n\u003Cp>\u003Cstrong>This is a strong paragraph (bold).\u003C/strong>\u003C/p>\n\u003Cp>\u003Csmall>This is small text.\u003C/small>\u003C/p>\n\u003Cp>\u003Cu>This is underlined text.\u003C/u>\u003C/p>\n\u003Cp>\u003Cdel>This is strikethrough text.\u003C/del>\u003C/p>\n\u003Cp>\u003Csup>Superscript\u003C/sup> and \u003Csub>subscript\u003C/sub> text.\u003C/p>\n\n\u003Ca href=\"#\">This is a link\u003C/a>\n\n\u003Cul>\n    \u003Cli>List item 1\u003C/li>\n    \u003Cli>List item 2\u003C/li>\n    \u003Cli>List item 3\u003C/li>\n\u003C/ul>\n\n\u003Col>\n    \u003Cli>Ordered list item 1\u003C/li>\n    \u003Cli>Ordered list item 2\u003C/li>\n    \u003Cli>Ordered list item 3\u003C/li>\n\u003C/ol>\n\n\u003Cdl>\n    \u003Cdt>Definition Term 1\u003C/dt>\n    \u003Cdd>Description 1\u003C/dd>\n    \u003Cdt>Definition Term 2\u003C/dt>\n    \u003Cdd>Description 2\u003C/dd>\n\u003C/dl>\n\n\u003Cblockquote>This is a blockquote, used to indicate the quotation of a large section of text from another source.\u003C/blockquote>\n\n\u003Ctable>\n    \u003Cthead>\n        \u003Ctr>\n            \u003Cth>Header 1\u003C/th>\n            \u003Cth>Header 2\u003C/th>\n        \u003C/tr>\n    \u003C/thead>\n    \u003Ctbody>\n        \u003Ctr>\n            \u003Ctd>Data 1\u003C/td>\n            \u003Ctd>Data 2\u003C/td>\n        \u003C/tr>\n        \u003Ctr>\n            \u003Ctd>Data 3\u003C/td>\n            \u003Ctd>Data 4\u003C/td>\n        \u003C/tr>\n    \u003C/tbody>\n\u003C/table>\n\n\u003Cpre>\u003Ccode>Code block sample\u003C/code>\u003C/pre>\n\n\u003Cform>\n    \u003Cinput type=\"text\" placeholder=\"Text input\">\n    \u003Ctextarea placeholder=\"Textarea\">\u003C/textarea>\n    \u003Clabel>\u003Cinput type=\"checkbox\"> Checkbox\u003C/label>\n    \u003Clabel>\u003Cinput type=\"radio\" name=\"radio\"> Radio Button\u003C/label>\n    \u003Cselect>\n        \u003Coption>Option 1\u003C/option>\n        \u003Coption>Option 2\u003C/option>\n    \u003C/select>\n\u003C/form>","tags":"","title":"html sample","modified":"20240319135533613","modifier":"theophile.dev","type":"text/plain"},
+{"title":"lorem10","created":"20210702142251440","modified":"20210702144635324","tags":"[[lorem ipsum]]","type":"text/vnd.tiddlywiki","text":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore, hic.","revision":"0","bag":"default","tmap.id":"1d9f3014-c2cd-418d-aeec-4173cfceb7ea"},
+{"title":"lorem100","created":"20210702142156175","modified":"20210702144610881","tags":"[[lorem ipsum]]","type":"text/vnd.tiddlywiki","revision":"0","bag":"default","tmap.id":"d10dea03-e857-40b9-af1d-4a5e4686cb9e","text":"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus nam consectetur natus dolor consequuntur laboriosam pariatur maxime, sed expedita iure, dolores minus optio obcaecati beatae minima nisi debitis asperiores nobis placeat, quo odit! Asperiores ipsam modi sunt earum magnam repellendus amet id nemo similique eligendi fuga, in sed veritatis reiciendis nam quibusdam accusantium quia minus. Ex quidem, ratione culpa hic quos autem at. Neque magni ducimus deserunt ex dolor amet, quos ut assumenda nostrum eius cum! Quibusdam molestias ad similique eum fugit officiis, quo accusamus molestiae maiores non maxime necessitatibus atque debitis vero pariatur autem sit voluptatibus nihil nesciunt soluta!"},
+{"title":"lorem1000","created":"20210702142310982","modified":"20210702144643874","tags":"[[lorem ipsum]]","type":"text/vnd.tiddlywiki","revision":"0","bag":"default","tmap.id":"e0bea883-dc5b-4033-b8c3-1866ae20a0e9","text":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur et cumque tempore, repudiandae odio veniam dolorem quisquam voluptatibus hic soluta corporis at aliquam explicabo inventore repellat architecto ut qui magni dolore doloribus itaque voluptas aliquid laboriosam. Voluptas hic error temporibus unde dicta. Temporibus ipsum nesciunt corrupti quasi unde blanditiis tempore sed porro velit voluptatem minima quaerat, architecto dignissimos error repellat quod consectetur illo ipsam? Sint assumenda ipsam ea placeat tempore, quas tempora, ullam minima voluptates nisi, reprehenderit iure ad necessitatibus error magni delectus. Ab, voluptatum vero voluptates explicabo nesciunt voluptatem, ipsa fugit sit enim est asperiores nostrum voluptate cupiditate quia laborum? Optio, ullam ex reprehenderit consectetur nesciunt ad sint deserunt nam asperiores nostrum fugiat velit repudiandae iste, vel tenetur vero vitae facere consequatur repellat ipsa excepturi saepe quo similique? Ratione repudiandae atque beatae esse, assumenda, quidem amet quaerat nulla maiores odit aut provident facere nisi doloribus possimus alias explicabo deserunt? Commodi soluta accusamus voluptatum quo atque a in voluptas velit consectetur? Asperiores itaque vero ipsa voluptatibus eius amet, officia impedit hic soluta aperiam non, accusantium natus libero voluptate tempore quis delectus. Iure excepturi mollitia ipsum, labore deleniti officiis tenetur a blanditiis, omnis tempore possimus, nostrum ea nam qui alias at. Autem corporis eligendi praesentium ipsam, ipsum sit quo ut, ea aperiam atque doloremque facere iusto nam accusantium, deserunt tempora quasi maxime quas tempore excepturi ex suscipit reprehenderit impedit. Iste nam fugiat, nobis ratione maxime molestias veniam cupiditate temporibus, sapiente quas sunt non quam! Ipsa quos commodi vel numquam atque! Ullam, ducimus dolor deleniti cum atque cumque quia voluptatem suscipit autem fugit culpa ipsa ratione ut nulla consequatur optio natus delectus tenetur sit aspernatur sint dolorem molestias voluptates. Culpa amet, totam dolorum officia unde reiciendis facere quibusdam consequuntur. Dolorum, impedit provident. Voluptate veritatis aut magni rerum eum rem nesciunt placeat perferendis similique doloremque, corporis vel, sed maiores consequatur illo vero nostrum enim accusantium sequi odit ipsa quidem fuga libero adipisci! Officiis nisi, aut voluptates dignissimos debitis ducimus cupiditate aliquam perferendis sit deserunt similique laboriosam consequuntur totam earum necessitatibus exercitationem iure optio provident unde dolore cumque dolores voluptatibus. Dignissimos iste eos reiciendis, ducimus nisi recusandae cupiditate suscipit quo saepe? Porro odio facere quia quisquam alias perferendis, nam dolores amet et ipsum eligendi labore voluptatum veritatis mollitia? Pariatur animi eaque, impedit libero modi, praesentium, saepe voluptas aperiam similique totam eos quo veniam doloribus. Quo similique voluptates ipsa distinctio deserunt cum excepturi accusantium nemo. Nam maiores facere aut numquam tenetur maxime voluptate sed sit id quas repellendus, assumenda sunt ex ipsam quis eligendi, sequi nostrum rerum facilis libero magnam, corporis temporibus est! Soluta error, sapiente corrupti eveniet commodi corporis quasi ipsa repellendus aspernatur odit natus, in, pariatur id iure. Non animi libero modi voluptatum officia sapiente exercitationem, eum illo optio, quia quod ad cupiditate fugit corporis sint? Quaerat, assumenda totam ducimus obcaecati amet facere libero? Dolores ex nostrum id fugiat dolorum! Harum ipsum iste perspiciatis corrupti praesentium quo et in esse id tempora accusamus eligendi commodi voluptate atque, dolorem quas cum eum suscipit vitae consequatur minus aperiam ipsam, laudantium recusandae. Maxime, impedit perspiciatis. Explicabo, possimus. Veritatis reiciendis cum architecto neque impedit itaque ipsa vitae, voluptates voluptatem dolorum hic blanditiis asperiores ratione facilis temporibus iure officia sunt perferendis nisi id libero? Impedit, cumque sint eveniet autem aperiam placeat cum vero animi, nulla, magni corrupti. Voluptas iusto soluta delectus? Fuga laboriosam ipsum officia quia ab voluptatibus pariatur culpa, magnam provident quasi porro cumque nobis dolore! Reprehenderit magnam pariatur voluptate impedit odio quae eos exercitationem accusantium, odit ipsum dolor perspiciatis alias iusto vel? Itaque suscipit quia exercitationem fuga, similique explicabo fugit delectus sunt accusamus perferendis ducimus dignissimos distinctio repudiandae mollitia assumenda omnis soluta possimus? Corrupti officiis provident quam iure, iste nemo natus nam blanditiis quasi eius et! Eum pariatur a inventore beatae cum, possimus reiciendis aliquam iusto suscipit id. Hic voluptates ipsa ex beatae sunt obcaecati velit exercitationem, nobis voluptate dignissimos? Dolores maiores qui perspiciatis cum voluptates assumenda tempore impedit quidem autem quasi quibusdam, animi omnis aperiam beatae. Eum veritatis similique maiores illum vel! Quo neque corrupti amet a cum adipisci consequuntur maiores, assumenda error suscipit distinctio quibusdam. A aut dolor at maiores ut, temporibus expedita facere velit atque excepturi nostrum molestias nesciunt eaque officiis fuga necessitatibus quidem doloribus aliquid provident et deserunt autem? Sint distinctio officiis eum ex neque corporis omnis quisquam aspernatur, necessitatibus ullam perferendis laborum, rem quas nobis explicabo laudantium. Consequuntur, impedit recusandae iste perspiciatis commodi beatae qui aut, dignissimos odio voluptate nam vel earum tempore enim, laudantium atque! Expedita minima repellat, dolores maiores et, placeat temporibus adipisci quam corporis perferendis voluptas cumque illo totam, odit magni. Ab nisi dolores, hic aliquid iste assumenda laborum aspernatur impedit quod voluptatibus. Eum enim, dolore neque et error, quos molestiae deserunt dicta voluptas, sapiente pariatur quaerat temporibus placeat numquam itaque sed harum! Ex delectus maiores vero laudantium fugiat quibusdam, odio deleniti quisquam? Rem error eligendi similique, ullam beatae ab eveniet officiis dolor in vitae debitis, dolore totam veniam sunt provident reiciendis. Dolorum necessitatibus repellat veniam aut quibusdam autem eveniet dolor nobis voluptates recusandae perspiciatis quod perferendis expedita corrupti, doloribus alias nihil amet aperiam consequatur quas nemo. Inventore, cumque error! Nisi explicabo omnis commodi rerum, est, voluptatum animi provident similique sapiente, totam quis facere! Ea quisquam rerum recusandae. Nulla a autem fuga tempora quaerat. Impedit eum accusantium, et praesentium totam veniam doloremque maiores cupiditate perferendis, officia commodi, accusamus minima. Odio ea maiores reprehenderit quasi voluptatibus natus iusto. Omnis, rem, nemo itaque corporis distinctio commodi delectus, ad voluptates aperiam illo eos quaerat aut corrupti totam sapiente. Tenetur numquam, laborum hic aliquam vitae necessitatibus veritatis quos corrupti earum sapiente, cumque voluptate distinctio aut a dolor voluptas? Rerum illum voluptatum, tenetur voluptas modi atque ipsam omnis assumenda debitis fugiat vel dolore nihil incidunt ab quod ex inventore nesciunt magnam itaque. Corrupti atque veniam, praesentium accusantium omnis a ab nihil officia doloribus explicabo ullam asperiores optio autem esse quaerat ad ea voluptatibus, ipsa exercitationem voluptas illo distinctio odit, perspiciatis culpa. Ipsum facilis fugiat dolor autem, mollitia amet dolorem explicabo modi accusantium id?"},
+{"created":"20240327233125451","creator":"theophile.dev","text":"https://developer.mozilla.org/en-US/docs/Web/CSS/font-size-adjust#examples","tags":"","title":"New Tiddler","modified":"20240327233127783","modifier":"theophile.dev"},
+{"created":"20240319151228624","creator":"theophile.dev","text":"//source: {{!!source}}//\n\n[[body text]]: 10–12pt for print (note: half-point differences are meaningful at this scale), 15-25px on the web.\n\n\u003C$transclude $variable=\"snippet\" field=\"ex1\" html=`\n\u003Cp font=\"cursive\">\nDifferent fonts set at the same point size won’t necessarily appear the same size.\n\u003C/p>\n\u003Cp font=\"monospace\">Different fonts set at the same point size won’t necessarily appear the same size.\n\u003C/p>\n\u003Cp font=\"sans-serif\">Different fonts set at the same point size won’t necessarily appear the same size.\n\u003C/p>\n` min-height=\"400px\"/>\n\nYou can match the length of two fonts by setting a block of text twice: once in the old font and once in the new font, both at the same point size. Adjust the point size of the new font until each line of text breaks in roughly the same place:\n\n\u003C$transclude $variable=\"snippet\" field=\"ex2\" html=`\n\u003Cp font=\"cursive\">\nDifferent fonts set at the same point size won’t necessarily appear the same size.\n\u003C/p>\n\u003Cp font=\"monospace\">Different fonts set at the same point size won’t necessarily appear the same size.\n\u003C/p>\n\u003Cp font=\"sans-serif\">Different fonts set at the same point size won’t necessarily appear the same size.\n\u003C/p>\n` min-height=\"400px\"/>\n\n!!! Smaller pt size\n\nPoint size can be even smaller in professionally typeset materials like publications and stationery. Text on business cards is often only 6–8 points. At these sizes, all caps text and lowercase are equally legible.\n\npoint size as emphasis\nIt’s fine to emphasize text with a larger point size (or de-emphasize it with a smaller point size). But use the subtlety that point-size adjustments offer. If your body text is set at 11 point, no need to jump to 14 point for emphasis. Start with a smaller increase—say, half a point—and move up in half-point increments until you get the emphasis you need. It’ll be less than you think.\n\npoint size on the web\nYou don’t have to use pixels as the sizing unit in your CSS (and indeed, most prefer not to). But the pixel is the least ambiguous CSS unit. Also, all CSS measurements are eventually converted to pixels in the browser.\n\nFor websites, I recommend body text of 15–25 pixels. As with print, you’ll need to fine-tune based on the particular font you’re using.\n\nWhy? Two reasons. First, we typically read screens from further away than we read printed material, so larger point sizes help compensate. Second, screen fonts are rendered with a relatively small number of pixels, so each extra row of pixels improves the quality. (See also screen-reading considerations.)\n\nYes, I know the web has a long tradition of teeny fonts. It’s time to let it go. This habit arose because the 14-inch monitors common in the 1990s had relatively coarse resolution. It persisted because web designers considered it virtuous to keep accommodating people who refused to upgrade those 14-inch monitors. But now, it’s merely silly.\n\nAlso silly is the web’s tradition of enormous point sizes for headings. This habit started with the default formatting of \u003Ch1> tags in browsers, which is about 200% of the default point size of body text. There is no typographic universe in which you need to double the point size to achieve emphasis. See headings for subtler techniques.\n\nFor more about the entrenched typographic habits of the web, see websites.\n\nBY THE WAY\nIn hyphens and dashes, I mentioned that em refers to a typographer’s measurement, not the letter M. The em size of a font is the same as its point size. Fonts are no longer made of metal, but the em concept persists. Digital fonts are drawn inside a rectangle called the em. To render a font on screen, your computer scales the em to match the current point size. Two fonts set at the same point size will appear to be different sizes if one occupies less space on its em.\n\nCan you determine the point size of a font by measuring it? No. Because of the differences in apparent sizing between fonts, there’s nothing you can measure that would be conclusive. The only way to figure it out is to set the same text, in the same font, with the same line length. Then adjust the point size so it matches the reference sample.\n\nAs you reduce point size, also reduce line spacing and line length. For instance, newspaper fonts are quite small, but remain legible because they have snug line spacing and short line length.\n\nOrganizations that need to control the length of documents (e.g., courts, colleges) usually do so with limits on point size and page length. In the typewriter age, this worked because typewriter output was standardized. In the digital age, it makes less sense, since artful formatting and layout can make documents appear longer or shorter as necessary. Anyone who needs to set standards for document length would be better off putting these rules in terms of word count. Unlike typewriters, all word processors have a word-count function. Compared to page limits, word counts are harder to evade. To be fair, they’re also harder to verify.\n\nIn 2012, a dispute about point size reached the Michigan Supreme Court. One side argued—contrary to 400 years of typographic custom—that a law calling for “14-point type” on a ballot meant that the uppercase letters of the font had to be at least 14 points tall. Fortunately the court did not adopt this interpretation. As a matter of law, it would’ve redefined the meaning of point size within Michigan.\n\n\n","title":"point size","modified":"20240319155825074","modifier":"theophile.dev","ex1":"body{\nmargin:20px;\ndisplay:grid;\ngrid-template-columns:1fr 6ch;\ngap:1ch;\n}\n[font]{\ngrid-column: 1/-1;\ndisplay:grid;\ngrid-template-columns:subgrid;\nfont-size:12pt;\n&:after{\nfont-family:system-ui;\ncontent:attr(font) \"\\A 12pt\";\nwhite-space: pre;\nalign-self:center;\ntext-transform: uppercase;\nfont-size:.6rem;\ngrid-column: 2;\n}\n}\n[font=\"cursive\"]{font-family:cursive;}\n[font=\"monospace\"]{font-family:monospace;}\n[font=\"sans-serif\"]{font-family:sans-serif;}\n","ex2":"body{\nmargin:20px;\ndisplay:grid;\ngrid-template-columns:1fr 6ch;\ngap:1ch;\n}\n[font]{\ngrid-column: 1/-1;\ndisplay:grid;\ngrid-template-columns:subgrid;\nfont-size:12pt;\n&:after{\nfont-family:system-ui;\ncontent:attr(font) \"\\A 12pt\";\nwhite-space: pre;\nalign-self:center;\ntext-transform: uppercase;\nfont-size:.6rem;\ngrid-column: 2;\n}\n}\n[font=\"cursive\"]{\nfont-family:cursive;\nfont-size:11.5pt;\n&:after{content:attr(font) \"\\A 11.5pt\";}\n}\n[font=\"monospace\"]{\nfont-family:monospace;\nfont-size:10pt;\n&:after{content:attr(font) \"\\A 10pt\";}\n}\n[font=\"sans-serif\"]{\nfont-family:sans-serif;\nfont-size:12pt;\n&:after{content:attr(font) \"\\A 12pt\";}\n}\n","source":"https://practicaltypography.com/point-size.html"},
+{"created":"20240315133920450","creator":"theophile.dev","text":"\u003Cstyle>\n.typography-editor{\ndisplay:grid;\ngrid-template-columns:1fr 1fr;\n&>*{\noutline:solid 1px;\np {margin:0;}\n}\n&>.editor .tc-edit-texteditor{\nheight:100%!important;\nmargin:0;\n}\n}\n\u003C/style>\n\u003Cp class=\"typography-editor\">\n\u003Cspan class=\"editor\">\n\u003C$edit-text field=\"style\" tag=\"textarea\" class=\"tc-edit-texteditor\"/>\n\u003C/span>\n\u003Cspan>\n\n\u003C$let style={{!!style}}>\n\n$$$text/vnd.tiddlywiki\n\\rules except dash list horizrule\n\n\u003C$wikify name=\"preview\" text={{html sample}} type=\"text/vnd.tiddlywiki\" output=\"html\" mode=\"block\">\n\u003Ciframe srcdoc=\u003C\u003Cpreview>> style=\"width:100%;height:100%\"/>","title":"preview","modified":"20240319135542344","modifier":"theophile.dev","style":"*{\n--color:blue;\ncolor:var(--color);\n}"},
+{"created":"20230917201738687","creator":"theophile.dev","text":";Articles and guides on design systems\n\n* https://www.designsystems.com : publication on design systems by Figma\n* https://stephaniewalter.design/en/blog/documenting-accessibility-in-the-design-phase/\n* Collection of [[examples|https://designsystemsrepo.com/design-systems]] of Design System, [[articles|https://designsystemsrepo.com/articles]], [[tools|https://designsystemsrepo.com/tools]], [[books|https://designsystemsrepo.com/books/]] and [[talks|https://designsystemsrepo.com/talks]] : https://designsystemsrepo.com/\n* Design Tools Database : https://uxtools.co/tools/design (based on this survey: https://uxtools.co/survey-2021)\n* https://www.lapa.ninja/learn/design-systems\n* https://thedesignsystem.guide","tags":"","title":"Resources for creating an accessible design system","modified":"20240315000806143","modifier":"theophile.dev"},
+{"created":"20240316011148076","creator":"theophile.dev","text":"* https://baselinehq.com/course.html\n* https://shapeofdesignbook.com/chapters/00-introduction/\n* https://designingfortheweb.co.uk/\n* https://designtrampoline.org/\n* https://webstyleguide.com/\n* https://anthonyhobday.com/sideprojects/saferules/\n* https://www.adhamdannaway.com/blog/ui-design/16-ui-design-rules\n* https://scrimba.com/learn/design\n* https://developer.mozilla.org/en-US/docs/Learn/Accessibility\n* https://inclusivedesignprinciples.org/\n* https://developer.mozilla.org/en-US/curriculum/core/design-for-developers/","tags":"","title":"Resources for learning design","modified":"20240327211321223","modifier":"theophile.dev"},
+{"created":"20240315234755202","creator":"theophile.dev","text":"\\procedure snippet(field,html,min-height)\n\u003Cstyle>\n.typography-editor{\ncontainer-type: inline-size;\nmin-height:\u003C\u003Cmin-height>>;\ndisplay:grid;\ngrid-template-columns:max-content 1fr;\n&>*{\noutline:solid 1px;\np {margin:0;height: 100%;}\n}\n&>.editor .tc-edit-texteditor{\nheight:100%!important;\nwidth: 50cqw;\nmax-width: 100cqw;\nmargin:0;\n}\n}\n\u003C/style>\n\u003Cp class=\"typography-editor\">\n\u003Cspan class=\"editor\">\n\u003C$edit-text field=\u003C\u003Cfield>> tag=\"textarea\" class=\"tc-edit-texteditor\"/>\n\u003C/span>\n\u003Cspan>\n\n\u003Ciframe srcdoc=```\u003Cstyle>${[\u003CstoryTiddler>get\u003Cfield>]}$\u003C/style>\u003Cbody>$(html)$\u003C/body>``` style=\"width:100%;height:100%\"/>\n\\end snippet","tags":"$:/tags/Macro","title":"snippet macro","modified":"20240316151911456","modifier":"theophile.dev","code-body":"yes"},
+{"created":"20240802184356442","creator":"theophile.dev","text":"\u003C\u003Cyt https://www.youtube.com/watch?v=F1bYncCtM80&list=PLz1LO9ooPaOgioL3JjhvAQq4UVafrTpVi>>","tags":"","title":"Spacing","modified":"20240802184404252","modifier":"theophile.dev"},
+{"created":"20240319143746580","creator":"theophile.dev","text":"# Importants body text considerations: [[point size]], [[line spacing]], [[line length]], and [[font|font recommendations]].\n# [[point size]]: 10–12pt for print, 15-25px on the web.\n# [[line spacing]]: 120–145% x [[point size]].\n# [[line length]]: 45–90ch in average.\n# Use a professional [[font|font recommendations]].\n# Avoid [[goofy fonts]], [[monospaced fonts]], most [[free fonts]], and [[system fonts]]—especially [[times new roman]] and [[arial]].\n# Use curly [[quotation marks]].\n# Use [[bold or italic]] sparingly.\n# Never [[underline]] (except for links).\n# [[all caps]] are for less than one line of text.\n# Use [[centered text]] sparingly.\n# Only [[one space between sentences]].\n# No multiple [[word spaces]], [[white-space characters]] in a row.\n# Do not use \"fake\" [[small caps]].\n# [[all caps]] and [[small caps]]: 5–12% extra [[letterspacing]].\n# Turn on [[kerning]].\n# [[first-line indents]]: 1-4 x the pt size of the text OR use 4–10pt of [[space between paragraphs]].\n# Use [[hyphenation]] with [[justified text]].\n# [[hyphens and dashes]] are not the same. Do not use multiple hyphens as a dash.\n# Use [[ampersands]] sparingly (except for name).\n# Use [[trademark and copyright symbols]].\n# Max [[1 \"!\"|question marks and exclamation points]] in a doc longer than 3 pages.\n# Put a [[nonbreaking space]] after [[paragraph and section marks]].\n# Use the [[ellipses]] character.\n# [[apostrophes]] point downward.\n# [[foot and inch marks]] are straight.","tags":"","title":"Summary of key rules","modified":"20240319145919450","modifier":"theophile.dev","source":"https://practicaltypography.com/summary-of-key-rules.html"},
+{"created":"20240319134837276","creator":"theophile.dev","text":"","title":"The Elements of Typographic Style","modified":"20240505201503047","modifier":"theophile.dev","_canonical_uri":"https://readings.design/PDF/the_elements_of_typographic_style.pdf","type":"application/pdf"},
+{"created":"20240314220715108","creator":"theophile.dev","text":"I am in my final year of studies for a bachelor's degree in graphic design & training to become a front-end developer, eager to tackle new projects. Interested in working together? Contact me at {{hello}}.","title":"theophile.dev","modified":"20240314232654482","modifier":"theophile.dev"},
+{"created":"20230617080946997","creator":"theophile.dev","text":"!! Notes\n\n\u003C$tiddler title=\"Typography\">\n\u003Cul>\n\u003C$list filter=\"[prefix[Typography]!match[Typography]]\">\n\u003Cli>\n\u003C$link>\n\u003C$text text={{{ [{!!title}removeprefix[Typography]trim[/]] }}}/>\n\u003C% if [{!!title}tag[interactive]] %>\n✨\n\u003C% endif %>\n\u003C/$link>\n\u003C/li>\n\u003C/$list>\n\u003C/ul>\n\u003C/$tiddler>\n\n//✨ interactives snippet//\n\n!! Ressources\n\n!!! Books\n\n* //[[The Elements of Typographic Style]]// by Robert Bringhurst\n* //[[The Complete Manual of Typography]]// by James Felici\n* //[[Thinking with Type]]// by Ellen Lupton\n* //[[The Anatomy of Type]]// by Stephen Coles\n* //[[Type Matters!]]// by Jim Williams\n\n!!! Online Resources\n\n* https://www.reddit.com/r/typography/wiki/index/\n* http://www.insideparagraphs.com/\n* [[Butterick’s Practical Typography|https://practicaltypography.com/page-layout.html]]\n* [[Typography Handbook|https://typographyhandbook.com/]]\n* [[Fonts Knowledge - Google Fonts|https://fonts.google.com/knowledge]]\n* https://eyelearn.org/typelab-by-hannahBoom/\n* [[Fundamental text and font styling|https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals]]\n* https://jarrettfuller.com/Graphic-Design-Readings/\n* https://m2.material.io/design/typography/understanding-typography.html\n\n!!! Blog posts\n\n* [[Typographic Design Patterns And Best Practices — Smashing Magazine|https://www.smashingmagazine.com/2009/08/typographic-design-survey-best-practices-from-the-best-blogs/#comments-typographic-design-survey-best-practices-from-the-best-blogs]]\n* [[The Ultimate Guide To Using Colors And Typography In 2024|https://inkbotdesign.com/colors-and-typography/]]\n* [[Control font sizes, line spacing, and word spacing|https://openclassrooms.com/en/courses/5265446-build-your-first-web-pages-with-html-and-css/5282851-control-font-sizes-line-spacing-and-word-spacing]]\n* [[The Complete Guide to Typography Design - AND Academy|https://www.andacademy.com/resources/blog/graphic-design/what-is-typography-design/]]\n\n!!! Typography guidelines for design systems\n\n* [[Spectrum|https://spectrum.adobe.com/page/typography/]]\n* [[Apple|https://developer.apple.com/design/human-interface-guidelines/typography]]\n* [[Codex|https://doc.wikimedia.org/codex/main/style-guide/typography.html]]\n* [[Fluent 2|https://fluent2.microsoft.design/typography]]\n* [[Firefox|https://acorn.firefox.com/latest/styles/typography/overview-gkJ3PjFB]]\n* [[Atlassian|https://atlassian.design/foundations/typography]]\n* [[Primer|https://primer.style/foundations/typography]]\n* [[Carbon|https://carbondesignsystem.com/elements/typography/overview/]]\n* [[Shopify Polaris|https://polaris.shopify.com/design/typography]]\n* [[A11Y Style Guide|https://a11y-style-guide.com/style-guide/section-general.html#kssref-general-typography]]\n* [[Design Systems Typography Guide|https://www.designsystems.com/typography-guides/]]","modified":"20240821074214880","title":"Typography","tags":"","modifier":"theophile.dev"},
+{"created":"20240315033923570","creator":"theophile.dev","text":"# [[Body text]] is the main content - start every project by making the body text look good.\n# [[Point size]] : the most comfortable range for body text is 10–12 point for print, 15–25 px on the web (depend on the optical size of the font)\n# [[Line spacing]] : vertical distance between lines. It should be 120–145% of the point size (in CSS, use the line-height property with a [[unitless value|Using unitless value for line-height]], e.g 130% would become 1.3).","tags":"","title":"Typography rules","modified":"20240315214505168","modifier":"theophile.dev"},
+{"created":"20230617080704815","creator":"theophile.dev","text":"Centered text is okay for text less than 3 lines; otherwise, use left alignment.\n\nDo not mix the alignments of title and body text.","title":"Typography/Alignement","modified":"20240314222644331","modifier":"theophile.dev"},
+{"created":"20230617081242485","creator":"theophile.dev","text":"Use a maximum of 2 text sizes, utilizing boldness and color to indicate hierarchy.","title":"Typography/Hierarchy","modified":"20240314222204274","modifier":"theophile.dev"},
+{"created":"20230617080552974","creator":"theophile.dev","text":" (i.e., tracking): 0.12em\n\nhttps://baymard.com/blog/line-length-readability\n\n-1 to -.5 for short and large titles to avoid readability issues.","title":"Typography/Letter spacing","modified":"20240314223519733","modifier":"theophile.dev"},
+{"created":"20240314223306461","creator":"theophile.dev","text":"(i.e., the spacing between lines of text): 1.5em (i.e., 1.5 times the font size)\n\nhttps://baymard.com/blog/line-length-readability\n\n\n\u003C$transclude $variable=\"snippet\" field=\"ex1\" html={{html sample}} min-height=\"400px\"/>","title":"Typography/Line height","modified":"20240319135533615","modifier":"theophile.dev","tags":"interactive","ex1":"* {\nline-height:1.5em;\n}"},
+{"created":"20230617063212253","creator":"theophile.dev","text":"Google, Dropbox, and Uber use a line height of about 1.2 times the title height.\n\nThe line spacing decreases with the line height.\n\n\n* ''Title'': line-heigh 1.1 - 1.3 em\n** font-size: \u003C$range field=\"font-size-titre\" min=\"22\" max=\"100\" increment=\"0.1\"/> {{!!font-size-titre}}pt\n** line-height: \u003C$range field=\"line-height-titre\" min=\"1.1\" max=\"1.3\" increment=\"0.01\"/> {{!!line-height-titre}}em\n* ''Body'': line-heigh 1.3 - 1.5 em\n** font-size: \u003C$range field=\"font-size-corps\" min=\"11\" max=\"13\" increment=\"0.1\"/> {{!!font-size-corps}}pt\n** line-height: \u003C$range field=\"line-height-corps\" min=\"1.3\" max=\"1.5\" increment=\"0.01\"/> {{!!line-height-corps}}em\n\n;Example\n\n\u003Csection class=\"typographie ok\">\n\u003Ch1>{{lorem10}}\u003C/h1>\n\u003Cp>{{lorem100}}\u003C/p>\n\u003C/section>\n\n\u003Cstyle>\n.typographie{\noutline:solid 1px;\n}\n.typographie.ok h1{\nfont-size:{{!!font-size-titre}}pt;\nline-height:{{!!line-height-titre}}em;\n}\n\n.typographie.ok p{\nfont-size:{{!!font-size-corps}}pt;\nline-height:{{!!line-height-corps}}em;\n}\n\u003C/style>\n\n","title":"Typography/Line spacing","modified":"20240315031728453","font-size-titre":"41","font-size-corps":"11","line-height-titre":"1.1","line-height-corps":"1.3","modifier":"theophile.dev","tags":"interactive"},
+{"created":"20240314223354873","creator":"theophile.dev","text":"2em\n\nhttps://baymard.com/blog/line-length-readability","title":"Typography/Paragraph spacing","modified":"20240314223403846","modifier":"theophile.dev","tags":""},
+{"created":"20230617081634586","creator":"theophile.dev","text":"\u003C\u003C\u003C\n“white space is to be regarded as an active element, not a passive background”\n\u003C\u003C\u003CJan Tschichold, 1930\n\nProximity: separate distinct text blocks by 2x the distance separating the body of a text block from its title.","title":"Typography/Spaces","modified":"20240314222138046","tmap.id":"3a2fa11f-fbe9-40a2-a1c0-da994a11f9f1","modifier":"theophile.dev"},
+{"created":"20230617070150943","creator":"theophile.dev","text":"* Too wide: Difficult to estimate the start and end of a line, concentration decreases along the line\n* Too short: Too much scanning\n\n\"Typography\", E. Ruder:\n\n*The optimal text length is 50 - 60 characters.\n\n[[The Elements of Typographic Style Applied to the Web|http://webtypography.net/2.1.2]]:\n\n* 45 to 75 characters for a single-column page, ideally 66 characters. For multiple columns, 40 to 50 characters.\n\n[[Web Accessibility Initiative (WCAG) guideline 1.4.8|https://www.w3.org/WAI/WCAG21/Understanding/visual-presentation.html]], [[Baymard Institute E-Commerce Accessibility Research Study|https://baymard.com/research/accessibility]]\n\n*No more than 80 characters\n\n;Example\n\n\u003Csection class=\"typography\">\n\u003Ch1>{{lorem10}}\u003C/h1>\n\n\u003Cp class=\"col\">{{lorem100}}\u003C/p>\n\u003Cp class=\"cols\">{{lorem100}}{{lorem100}}{{lorem100}}\u003C/p>\n\u003C/section>\n\n\u003Cstyle>\nsection.typography .col{\nmax-width:70ch;\n}\n\nsection.typography .cols{\ncolumn-width:45ch;\n}\n\u003C/style>\n\n\n; Reading\n\n* https://www.smashingmagazine.com/2014/09/balancing-line-length-font-size-responsive-web-design/\n* https://readings.design/PDF/the_elements_of_typographic_style.pdf\n* https://www.joshwcomeau.com/css/full-bleed/","title":"Typography/Text length","modified":"20240505202005514","tmap.id":"ac5e0899-98f0-4868-bd3e-31e91a357051","columns":"2","column-width":"47","modifier":"theophile.dev","tags":""},
+{"created":"20230624173202676","creator":"theophile.dev","text":"* https://typescale.com/\n* https://m3.material.io/styles/typography/type-scale-tokens\n* https://m2.material.io/design/typography/the-type-system.html#type-scale\n\n\u003C\u003Cyt \"https://youtu.be/NLwP7A2z8LU\">>","tags":"","title":"Typography/Typescale","modified":"20240314223806017","tmap.id":"86989be8-a1a8-48aa-8a53-7d2ceea7ad69","modifier":"theophile.dev"},
+{"created":"20240314223415679","creator":"theophile.dev","text":"0.16em\n\nhttps://baymard.com/blog/line-length-readability","title":"Typography/Word spacing","modified":"20240314223424234","modifier":"theophile.dev","tags":""},
+{"created":"20240315214440159","creator":"theophile.dev","text":"source: https://stackoverflow.com/a/20818206/10234474\n\nIn word processors and page layout programs, [[line-height|http://www.w3.org/TR/2011/PR-CSS2-20110412/visudet.html#propdef-line-height]] is the space between the baselines of text, but in CSS, it includes space around the text (box model).\n\nCSS uses a formula (`line-height = L + AD`) to calculate this space, where [[AD is the font's height|http://www.w3.org/TR/2011/PR-CSS2-20110412/visudet.html#leading]] and L is extra space added (\"[[half the leading is added above A and the other half below D|https://www.w3.org/TR/2011/PR-CSS2-20110412/visudet.html#leading:~:text=Half%20the%20leading%20is%20added%20above%20A%20and%20the%20other%20half%20below%20D]].\"). This means for text with a certain font size and line-height, there will be equal space above and below (leading) the text:\n\n* `font-size:16px;line-height:24px;` : (24-16)/2 = 4px of leading \n* `font-size:8px;line-height:24px;` : (24-8)/2 = 8px of leading\n\nWhen using % or em units for line-height, children inherit the calculated value, not the unit. This can lead to more space above and below text in smaller elements, adjusting their baseline higher: The children get the same `line-height` as the parent block. But because of the `L + AD` formula, the text of that span has more leading on the top and bottom, and thus the baseline sits higher in its box.  To [[keep baselines aligned|http://www.w3.org/TR/2011/PR-CSS2-20110412/visudet.html#line-height]], the browser pushes down the `smaller` span vertically to match the baselines.\n\nSince the `line-height` property defines [[the minimum height of line boxes within an element|http://www.w3.org/TR/2011/PR-CSS2-20110412/visudet.html#propdef-line-height]], the browser will increase the spacing between lines in the enclosing block to ensures there’s enough room for the baseline of the smaller text to align with the baseline of the larger text without overlapping or crowding.\n\nThe default value of `line-height` is `normal`, a unitless value recommended to be \"[[between 1.0 and 1.2|http://www.w3.org/TR/2011/PR-CSS2-20110412/visudet.html#propdef-line-height]]\". This means that the default spacing between lines will be roughly 100% to 120% of the font size used. When setting line-height using a multiplier (like 1.5), child elements don't inherit this exact value but calculate their own based on their font size:\n\n* `line-height: 1.5; font-size: 14px;` : line height is 14px * 1.5 = 21px\n* If the font size of the child is set to 50%:\n** font size is 14px * 50% = 7px\n** line height is 7px * 1.5 = 10.5px (generally rounded to a whole pixel). Overall, the box of the child is half the size of the surrounding text.\n\nThis calculation ensures that smaller text aligns correctly with the baseline of adjacent text without affecting the spacing of the entire text block.\n\n\u003C$transclude $variable=\"snippet\" field=\"ex1\" html=```\u003Cp>${[{lorem10}]}$\u003Cbr>\u003Cspan>${[{lorem10}]}$\u003C/span>\u003Cbr>${[{lorem10}]}$\u003C/p>``` min-height=\"400px\"/>\n","title":"Using unitless value for line-height","modified":"20240316004721606","modifier":"theophile.dev","ex1":"/*WIP*/\n\np{\ncolor:green;\nfont-size:var(--font-size);\nline-height:24px;\nposition:relative;\n\nspan{\ndisplay:inline-block;\nposition:relative;\ncolor:red;\n\n}\n}\n\n:where(p, p *):before{\nz-index:-1;\nposition:absolute;\ntop:0;\nbottom:0;\ncontent:\"\";\ndisplay:block;\nheight:1lh;\nwidth:100%;\noutline:solid 1px currentColor;\nopacity:.1;\n}"},
+{"created":"20240314223715623","creator":"theophile.dev","text":"* https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0283778\n* https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0036042","tags":"","title":"UX Research & Typography","modified":"20240314223732186","modifier":"theophile.dev"},
+{"created":"20240328174413949","creator":"theophile.dev","text":"https://modernfontstacks.com/","tags":"","title":"Web safe fonts","modified":"20240328174420001","modifier":"theophile.dev"},
+{"created":"20240319120235958","creator":"theophile.dev","text":"The `widows` CSS property sets the minimum number of lines in a block container that must be shown at the top of a page, region, or column.\n\nIn typography, a widow is the last line of a paragraph that appears alone at the top of a page. (The paragraph is continued from a prior page.)\n\n\u003Ciframe\nstyle=\"width:100%;height:500px;border:0;\"\nsrcdoc=\"\"\"\n\u003Cstyle>\n*{\nmargin:0;\nposition:fixed;\ninset:0;\nheight:500px;\n}\n\u003C/style>\n\u003Cscript src=\"https://cdn.jsdelivr.net/gh/ireade/caniuse-embed/public/caniuse-embed.min.js\">\u003C/script>\n\u003Cbody\nclass=\"ciu_embed\"\ndata-feature=\"mdn-css__properties__widows\"\ndata-periods=\"future_1,current\"\ndata-accessible-colours=\"true\"\n/>\n\"\"\"/>\n\u003C$transclude $variable=\"snippet\" field=\"ex1\" html=`\n\u003Cdiv>\n  \u003Cp>This is the first paragraph containing some text.\u003C/p>\n  \u003Cp>\n    This is the second paragraph containing some more text than the first one.\n    It is used to demonstrate how widows work.\n  \u003C/p>\n  \u003Cp>\n    This is the third paragraph. It has a little bit more text than the first\n    one.\n  \u003C/p>\n\u003C/div>\n\n` min-height=\"400px\"/>","tags":"","title":"widows","modified":"20240319151518325","modifier":"theophile.dev","ex1":"div {\n  background-color: lime;\n  columns: 3;\n  widows:100;\n}\n\np {\n  background-color: #8ca0ff;\n}\n\np:first-child {\n  margin-top: 0;\n}\n"}
+]</script><div id="storeArea" style="display:none;"></div>
+<!--~~ Raw markup for the bottom of the body section ~~-->
+
+<!--~~ Load external JavaScripts ~~-->
+<script src="https://designthinkerer.github.io/tw/typography/myplugins-5.3.6-prerelease.js" onerror="alert('Error: Cannot load https://designthinkerer.github.io/tw/typography/myplugins-5.3.6-prerelease.js');"></script>
+<script src="https://tiddlywiki.com/prerelease/tiddlywikicore-5.3.6-prerelease.js" onerror="alert('Error: Cannot load https://tiddlywiki.com/prerelease/tiddlywikicore-5.3.6-prerelease.js');"></script>
+</body>
+</html>
