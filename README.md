@@ -1,33 +1,27 @@
-# 🗂 My TiddlyWiki Backup
+# 🗂 My TiddlyWikis
 
-This repository contains a backup of some of [my wikis hosted on Tiddlyhost](https://tiddlyhost.com/hub/user/Telumire). Each topic has its own dedicated wiki with the latest updates provided dynamically.
-
-## 🌟 Topics
-
-Here are the topics currently available in this repository:
-
-### 1. [Typography](https://designthinkerer.github.io/tw/typography)  
+## 1. [Typography](https://designthinkerer.github.io/tw/typography)  
 *Notes on typography and printing.*
 
 ![Last Updated](https://img.shields.io/badge/dynamic/json?label=Last%20Updated&query=$[0].commit.committer.date&url=https%3A%2F%2Fapi.github.com%2Frepos%2FDesignThinkerer%2Ftw%2Fcommits%3Fpath%3Dtypography%2Findex.html%26page%3D1%26per_page%3D1)
 
 ---
 
-### 2. [Minimal CSS](https://designthinkerer.github.io/tw/minimal-css)  
+## 2. [Minimal CSS](https://designthinkerer.github.io/tw/minimal-css)  
 *A minimal CSS theme for TiddlyWiki (work in progress) along with various notes on CSS.*
 
 ![Last Updated](https://img.shields.io/badge/dynamic/json?label=Last%20Updated&query=$[0].commit.committer.date&url=https%3A%2F%2Fapi.github.com%2Frepos%2FDesignThinkerer%2Ftw%2Fcommits%3Fpath%3Dminimal-css%2Findex.html%26page%3D1%26per_page%3D1)
 
 ---
 
-### 3. [Curated Videos](https://designthinkerer.github.io/tw/curated-videos)  
+## 3. [Curated Videos](https://designthinkerer.github.io/tw/curated-videos)  
 *Handpicked videos to beat the YouTube algorithm.*
 
 ![Last Updated](https://img.shields.io/badge/dynamic/json?label=Last%20Updated&query=$[0].commit.committer.date&url=https%3A%2F%2Fapi.github.com%2Frepos%2FDesignThinkerer%2Ftw%2Fcommits%3Fpath%3Dcurated-videos%2Findex.html%26page%3D1%26per_page%3D1)
 
 ---
 
-### 4. [Dev Web](https://designthinkerer.github.io/tw/dev-web)  
+## 4. [Dev Web](https://designthinkerer.github.io/tw/dev-web)  
 *Notes pour la formation IFAPME.*
 
 ![Last Updated](https://img.shields.io/badge/dynamic/json?label=Last%20Updated&query=$[0].commit.committer.date&url=https%3A%2F%2Fapi.github.com%2Frepos%2FDesignThinkerer%2Ftw%2Fcommits%3Fpath%3Ddev-web%2Findex.html%26page%3D1%26per_page%3D1)
