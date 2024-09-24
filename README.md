@@ -1,6 +1,6 @@
 # 🗂 My TiddlyWiki Backup
 
-This repository contains a backup of some of [my wikis hosted on Tiddlyhost](https://tiddlyhost.com/hub/user/Telumire). It serves as a collection of my notes, curated resources, and custom themes for TiddlyWiki. Each topic has its own dedicated page with the latest updates provided dynamically.
+This repository contains a backup of some of [my wikis hosted on Tiddlyhost](https://tiddlyhost.com/hub/user/Telumire). Each topic has its own dedicated wiki with the latest updates provided dynamically.
 
 ## 🌟 Topics
 
