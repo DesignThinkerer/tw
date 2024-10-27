@@ -35,6 +35,13 @@
 
 ---
 
+## 6. [Grok Tiddlywiki - FR](https://designthinkerer.github.io/tw/grok-tiddlywiki-fr)  
+*Traduction française du livre Grok Tiddlywiki.*
+
+![Last Updated](https://img.shields.io/badge/dynamic/json?label=Last%20Updated&query=$[0].commit.committer.date&url=https%3A%2F%2Fapi.github.com%2Frepos%2FDesignThinkerer%2Ftw%2Fcommits%3Fpath%3Dgrok-tiddlywiki-fr%2Findex.html%26page%3D1%26per_page%3D1)
+
+---
+
 ## 📚 How to Use
 
 1. Click on any topic above to explore the content.
