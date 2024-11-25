@@ -22,12 +22,16 @@
      */
     try {
         const fetchedData = await fetchData();
-        if (fetchedData) {
-            assetList = fetchedData.assetList;
-            attachMessageListener(fetchedData.libraryUrl);
-        } else {
-            console.error("Failed to fetch data. Initialization aborted.");
+        if (!fetchedData) {
+            throw new Error("Failed to fetch required data. Exiting script.");
         }
+
+        // Parse and store the asset list
+        assetList = parseAssetList(fetchedData.assetList);
+        console.log("Asset list initialized successfully:", assetList);
+
+        // Attach message event listener
+        attachMessageListener(fetchedData.libraryUrl);
     } catch (error) {
         console.error("Critical error during initialization:", error);
     }
@@ -53,12 +57,12 @@
                 throw new Error(`HTTP error ${response.status}`);
             }
 
-            const assetList = parseAssetList(await response.json());
+            const assetList = await response.json();
             console.info("Data fetched successfully from:", libraryUrl);
 
             return { assetList, libraryUrl };
         } catch (error) {
-            console.error("Failed to fetch data from server:", { libraryUrl, error });
+            console.error("Failed to fetch data from server:", error);
             return null;
         }
     }
@@ -69,14 +73,10 @@
      * @returns {Array} - Parsed and validated asset list.
      */
     function parseAssetList(rawAssetList) {
-        if (!Array.isArray(rawAssetList) || !rawAssetList[0]?.text) {
-            console.error("Invalid asset list format");
-            return [];
-        }
         try {
             return JSON.parse(`[${rawAssetList[0].text}]`);
         } catch (error) {
-            console.error("Failed to parse asset list:", { rawAssetList, error });
+            console.error("Failed to parse asset list. Raw data:", rawAssetList, error);
             return [];
         }
     }
@@ -88,16 +88,9 @@
     function attachMessageListener(libraryUrl) {
         console.info("Attaching message event listener...");
 
-        const allowedOrigin = "https://your-allowed-origin.com"; // Replace with your origin
-
         window.addEventListener(
             "message",
             async function handleMessage(event) {
-                if (event.origin !== allowedOrigin) {
-                    console.warn("Ignoring message from untrusted origin:", event.origin);
-                    return;
-                }
-
                 console.log("Message received from:", event.origin);
                 console.debug("Message data:", event.data);
 
@@ -163,7 +156,7 @@
                     body: cleanedResponse,
                 });
             } catch (error) {
-                console.error("Failed to fetch plugin data:", { pluginUrl, error });
+                console.error("Failed to fetch plugin data:", error);
                 sendMessage(event.source, {
                     verb: "GET-RESPONSE",
                     status: "404",
@@ -225,7 +218,6 @@
         }
     }
 })();
-
 </script>
 </head>
 <body>
