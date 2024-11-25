@@ -46,6 +46,7 @@
                             }
 
                             const pluginUrl = `${fetchedData.libraryUrl}/tiddlers.json?title=${encodeURIComponent(pluginTitle)}&include_system=1`;
+                            console.log("pluginUrl: ",pluginUrl);
 
                             try {
                                 const pluginResponse = await fetch(pluginUrl);
