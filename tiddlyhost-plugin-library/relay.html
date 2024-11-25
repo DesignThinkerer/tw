@@ -9,7 +9,7 @@
         const fetchedData = await fetchAssetList();
         console.log("Fetched Data:", fetchedData);
 
-        assetList = JSON.parse(fetchedData.text);
+        assetList = JSON.parse(`[${fetchedData[0].text}]`);
         console.log("Asset List:", assetList);
 
         // Add event listener for window messages
