@@ -2,7 +2,7 @@
 (async function () {
     "use strict";
 
-    let assetList = []; 
+    var assetList; 
 
     // Main execution
     try {
@@ -12,7 +12,7 @@
         const parsedData = stripOuterBrackets(fetchedData);
         console.log("Parsed Data:", parsedData);
 
-        assetList = parsedData.text;
+        assetList = JSON.parse(parsedData.text);;
         console.log("Asset List:", assetList);
 
         // Add event listener for window messages
