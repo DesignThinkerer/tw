@@ -6,7 +6,7 @@
 
     // Main execution
     try {
-        assetList = await fetchAssetList(); // Fetch the asset list
+        assetList =  stripOuterBrackets(await fetchAssetList()); // Fetch the asset list
         console.log("Asset list is ready for use:", assetList);
 
         // Add event listener for window messages
