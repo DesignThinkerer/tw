@@ -7,10 +7,13 @@
     // Main execution
     try {
         const fetchedData = await fetchAssetList();
-        const parsedData = stripOuterBrackets(fetchedData);
-        assetList = parsedData.text;
+        console.log("Fetched Data:", fetchedData);
 
-        console.log("Asset list is ready for use:", assetList);
+        const parsedData = stripOuterBrackets(fetchedData);
+        console.log("Parsed Data:", parsedData);
+
+        assetList = parsedData.text;
+        console.log("Asset List:", assetList);
 
         // Add event listener for window messages
         window.addEventListener(
