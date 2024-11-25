@@ -9,10 +9,7 @@
         const fetchedData = await fetchAssetList();
         console.log("Fetched Data:", fetchedData);
 
-        const parsedData = stripOuterBrackets(fetchedData);
-        console.log("Parsed Data:", parsedData);
-
-        assetList = JSON.parse(parsedData.text);
+        assetList = JSON.parse(fetchedData.text);
         console.log("Asset List:", assetList);
 
         // Add event listener for window messages
