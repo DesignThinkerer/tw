@@ -1,13 +1,3 @@
-<!doctype html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="application-name" content="TiddlyWiki Plugin Library" />
-<meta name="application-version" content="v0.0.0" />
-<meta name="copyright" content="Copyright 2015 Jeremy Ruston" />
-<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
-<title>Plugin Library</title>
-<script type="module">
 (async function () {
     "use strict";
 
@@ -218,11 +208,3 @@
         }
     }
 })();
-</script>
-</head>
-<body>
-<h1>HelloThere</h1>
-<p>This is the TiddlyHost plugin library. It is not intended to be opened directly in the browser.</p>
-<p>See <a href="https://tiddlywiki.com/" target="_blank">https://tiddlywiki.com/</a> for details of how to install plugins.</p>
-</body>
-</html>
