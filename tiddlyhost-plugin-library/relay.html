@@ -45,7 +45,7 @@
                                 pluginTitle = pluginTitle.slice(0, -5); // Remove the .json suffix
                             }
 
-                            const pluginUrl = `${fetchedData.libraryUrl}/tiddlers.json?title=${encodeURIComponent(pluginTitle)}&include_system=1`;
+                            const pluginUrl = `${fetchedData.libraryUrl}/tiddlers.json?title=${pluginTitle}&include_system=1`;
                             console.log("pluginUrl: ",pluginUrl);
 
                             try {
