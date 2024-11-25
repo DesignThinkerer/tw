@@ -1,4 +1,5 @@
-(async function () {
+<script type="module">
+    (async function () {
     "use strict";
 
     /**
@@ -208,3 +209,4 @@
         }
     }
 })();
+</script>
