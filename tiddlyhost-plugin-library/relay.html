@@ -11,115 +11,44 @@
 (async function () {
     "use strict";
 
-    var assetList; 
+    /**
+     * Global variables initialized during script execution.
+     * @type {Object[]} assetList - List of assets fetched from the server.
+     */
+    let assetList = [];
 
-    // Main execution
+    /**
+     * Main execution block
+     */
     try {
         const fetchedData = await fetchData();
-        console.log("Fetched Data:", fetchedData);
+        if (!fetchedData) {
+            throw new Error("Failed to fetch required data. Exiting script.");
+        }
 
-        assetList = JSON.parse(`[${fetchedData.assetList[0].text}]`);
-        console.log("Asset List:", assetList);
+        // Parse and store the asset list
+        assetList = parseAssetList(fetchedData.assetList);
+        console.log("Asset list initialized successfully:", assetList);
 
-        // Add event listener for window messages
-        window.addEventListener(
-            "message",
-            async function listener(event) {
-                console.log("Received message from:", event.origin);
-                console.log("Message content:", event.data);
-
-                switch (event.data.verb) {
-                    case "GET":
-                        if (event.data.url === "recipes/library/tiddlers.json") {
-                            // Respond with the full asset list
-                            event.source.postMessage(
-                                {
-                                    verb: "GET-RESPONSE",
-                                    status: "200",
-                                    cookies: event.data.cookies,
-                                    url: event.data.url,
-                                    type: "application/json",
-                                    body: JSON.stringify(assetList, null, 4),
-                                },
-                                "*"
-                            );
-                        } else if (event.data.url.indexOf("recipes/library/tiddlers/") === 0) {
-                            // Handle requests for individual tiddlers
-                            let pluginTitle = removePrefix(
-                                event.data.url,
-                                "recipes/library/tiddlers/"
-                            );
-
-                            if (pluginTitle.endsWith(".json")) {
-                                pluginTitle = pluginTitle.slice(0, -5); // Remove the .json suffix
-                            }
-
-                            const pluginUrl = `${fetchedData.libraryUrl}/tiddlers.json?title=${pluginTitle}&include_system=1`;
-                            console.log("pluginUrl: ",pluginUrl);
-
-                            try {
-                                const pluginResponse = await fetch(pluginUrl);
-                                if (!pluginResponse.ok) {
-                                    throw new Error(`HTTP error ${pluginResponse.status}`);
-                                }
-                                const pluginData = await pluginResponse.json();
-                                const cleanedResponse = stripOuterBrackets(pluginData);
-                                event.source.postMessage(
-                                    {
-                                        verb: "GET-RESPONSE",
-                                        status: "200",
-                                        cookies: event.data.cookies,
-                                        url: event.data.url,
-                                        type: "application/json",
-                                        body: cleanedResponse,
-                                    },
-                                    "*"
-                                );
-                            } catch (error) {
-                                console.error("Failed to fetch plugin data:", error);
-                                event.source.postMessage(
-                                    {
-                                        verb: "GET-RESPONSE",
-                                        status: "404",
-                                        cookies: event.data.cookies,
-                                        url: event.data.url,
-                                        type: "text/plain",
-                                        body: "Not found",
-                                    },
-                                    "*"
-                                );
-                            }
-                        } else {
-                            // Respond with 404 for unknown routes
-                            event.source.postMessage(
-                                {
-                                    verb: "GET-RESPONSE",
-                                    status: "404",
-                                    cookies: event.data.cookies,
-                                    url: event.data.url,
-                                    type: "text/plain",
-                                    body: "Not found",
-                                },
-                                "*"
-                            );
-                        }
-                        break;
-                }
-            },
-            false
-        );
-
+        // Attach message event listener
+        attachMessageListener(fetchedData.libraryUrl);
     } catch (error) {
-        console.error("Error in main execution:", error);
+        console.error("Critical error during initialization:", error);
     }
 
+    /**
+     * Fetch data from the server.
+     * @returns {Promise<Object|null>} - Returns the fetched data or null on failure.
+     */
     async function fetchData() {
+        console.info("Starting data fetch...");
+
         const queryParams = new URLSearchParams(window.location.search);
-        const libraryUrl = queryParams.get('libraryUrl');
+        const libraryUrl = queryParams.get("libraryUrl");
 
         if (!libraryUrl) {
-            console.error("No libraryUrl specified in query parameters.");
-            return [];
+            console.error("No 'libraryUrl' found in query parameters. Aborting fetch.");
+            return null;
         }
 
         try {
@@ -127,29 +56,162 @@
             if (!response.ok) {
                 throw new Error(`HTTP error ${response.status}`);
             }
-            return {
-                assetList: await response.json(),
-                libraryUrl: libraryUrl,
-            };
+
+            const assetList = await response.json();
+            console.info("Data fetched successfully from:", libraryUrl);
+
+            return { assetList, libraryUrl };
         } catch (error) {
-            console.error("Failed to fetch asset list:", error);
-            return {};
+            console.error("Failed to fetch data from server:", error);
+            return null;
         }
     }
 
-    // Helper function to remove string prefixes
+    /**
+     * Parse the asset list from the fetched data.
+     * @param {Array} rawAssetList - The raw asset list from the server.
+     * @returns {Array} - Parsed and validated asset list.
+     */
+    function parseAssetList(rawAssetList) {
+        try {
+            return JSON.parse(`[${rawAssetList[0].text}]`);
+        } catch (error) {
+            console.error("Failed to parse asset list. Raw data:", rawAssetList, error);
+            return [];
+        }
+    }
+
+    /**
+     * Attach a message event listener to handle incoming messages.
+     * @param {string} libraryUrl - The base URL for the library.
+     */
+    function attachMessageListener(libraryUrl) {
+        console.info("Attaching message event listener...");
+
+        window.addEventListener(
+            "message",
+            async function handleMessage(event) {
+                console.log("Message received from:", event.origin);
+                console.debug("Message data:", event.data);
+
+                if (!event.data || typeof event.data.verb !== "string") {
+                    console.warn("Ignoring message with invalid structure.");
+                    return;
+                }
+
+                try {
+                    switch (event.data.verb) {
+                        case "GET":
+                            await handleGetRequest(event, libraryUrl);
+                            break;
+                        default:
+                            console.warn("Unhandled message verb:", event.data.verb);
+                    }
+                } catch (error) {
+                    console.error("Error processing message:", error);
+                }
+            },
+            false
+        );
+    }
+
+    /**
+     * Handle GET requests received via the postMessage API.
+     * @param {MessageEvent} event - The incoming message event.
+     * @param {string} libraryUrl - The base URL for the library.
+     */
+    async function handleGetRequest(event, libraryUrl) {
+        if (event.data.url === "recipes/library/tiddlers.json") {
+            // Return the full asset list
+            sendMessage(event.source, {
+                verb: "GET-RESPONSE",
+                status: "200",
+                cookies: event.data.cookies,
+                url: event.data.url,
+                type: "application/json",
+                body: JSON.stringify(assetList, null, 4),
+            });
+        } else if (event.data.url.startsWith("recipes/library/tiddlers/")) {
+            // Handle individual tiddler requests
+            const pluginTitle = removePrefix(event.data.url, "recipes/library/tiddlers/")
+                .replace(".json", "");
+            const pluginUrl = `${libraryUrl}/tiddlers.json?title=${pluginTitle}&include_system=1`;
+
+            console.log("Fetching individual plugin data from:", pluginUrl);
+
+            try {
+                const pluginResponse = await fetch(pluginUrl);
+                if (!pluginResponse.ok) {
+                    throw new Error(`HTTP error ${pluginResponse.status}`);
+                }
+                const pluginData = await pluginResponse.json();
+                const cleanedResponse = stripOuterBrackets(pluginData);
+
+                sendMessage(event.source, {
+                    verb: "GET-RESPONSE",
+                    status: "200",
+                    cookies: event.data.cookies,
+                    url: event.data.url,
+                    type: "application/json",
+                    body: cleanedResponse,
+                });
+            } catch (error) {
+                console.error("Failed to fetch plugin data:", error);
+                sendMessage(event.source, {
+                    verb: "GET-RESPONSE",
+                    status: "404",
+                    cookies: event.data.cookies,
+                    url: event.data.url,
+                    type: "text/plain",
+                    body: "Not found",
+                });
+            }
+        } else {
+            // Unknown URL, return 404
+            console.warn("Unknown GET request URL:", event.data.url);
+            sendMessage(event.source, {
+                verb: "GET-RESPONSE",
+                status: "404",
+                cookies: event.data.cookies,
+                url: event.data.url,
+                type: "text/plain",
+                body: "Not found",
+            });
+        }
+    }
+
+    /**
+     * Send a message to a target window.
+     * @param {Window} targetWindow - The target window to send the message to.
+     * @param {Object} message - The message object to send.
+     */
+    function sendMessage(targetWindow, message) {
+        targetWindow.postMessage(message, "*");
+        console.debug("Message sent:", message);
+    }
+
+    /**
+     * Remove a specified prefix from a string.
+     * @param {string} string - The input string.
+     * @param {string} prefix - The prefix to remove.
+     * @returns {string} - The string without the prefix.
+     */
     function removePrefix(string, prefix) {
         return string.startsWith(prefix) ? string.substring(prefix.length) : string;
     }
 
-    // Helper function to strip outer brackets [] from JSON response
+    /**
+     * Strip outer brackets from a JSON response.
+     * @param {Object|string} json - The JSON data.
+     * @returns {string} - The cleaned JSON string.
+     */
     function stripOuterBrackets(json) {
         try {
             const parsed = typeof json === "string" ? JSON.parse(json) : json;
             if (Array.isArray(parsed) && parsed.length === 1) {
-                return JSON.stringify(parsed[0], null, 4); // Return the first (and only) object in the array
+                return JSON.stringify(parsed[0], null, 4);
             }
-            return JSON.stringify(parsed, null, 4); // Return formatted JSON as-is
+            return JSON.stringify(parsed, null, 4);
         } catch (error) {
             console.error("Error parsing JSON:", error);
             return json; // Return original JSON if parsing fails
@@ -158,5 +220,9 @@
 })();
 </script>
 </head>
-<body><h1>HelloThere</h1><p>This is the TiddlyHost plugin library. It is not intended to be opened directly in the browser.</p><p>See <a href="https://tiddlywiki.com/" target="_blank">https://tiddlywiki.com/</a> for details of how to install plugins.</p></body>
+<body>
+<h1>HelloThere</h1>
+<p>This is the TiddlyHost plugin library. It is not intended to be opened directly in the browser.</p>
+<p>See <a href="https://tiddlywiki.com/" target="_blank">https://tiddlywiki.com/</a> for details of how to install plugins.</p>
+</body>
 </html>
